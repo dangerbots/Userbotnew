@@ -20,7 +20,7 @@ else:
 alive_txt = """{}\n
 <b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
 <b>Telethon ≈</b>  <i>{}</i>
-<b>Hêllẞø† ≈</b>  <i>{}</i>
+<b>dangercat ≈</b>  <i>{}</i>
 <b>Uptime ≈</b>  <i>{}</i>
 <b>Abuse ≈</b>  <i>{}</i>
 <b>Sudo ≈</b>  <i>{}</i>
@@ -73,7 +73,7 @@ if Config.BOT_USERNAME and tbot:
             if a:
                 help_pic = a.split(" ")[0]
             else:
-                help_pic = "https://te.legra.ph/file/3a48c5756d2a9763eafaf.jpg"
+                help_pic = "https://telegra.ph/file/2279444c6debd7b89089c.jpg"
             help_msg = f"🔰 **{hell_mention}**\n\n📜 __Plugins:__ `{len(CMD_HELP)}` \n🗂️ __Commands:__ `{len(apn)}`\n🗒️ __Page:__ 1/{veriler[0]}"
             if help_pic == "DISABLE":
                 result = builder.article(
@@ -93,7 +93,7 @@ if Config.BOT_USERNAME and tbot:
                 result = builder.document(
                     help_pic,
                     text=help_msg,
-                    title="HellBot Alive",
+                    title="Dangercat Alive",
                     buttons=veriler[1],
                     link_preview=False,
                 )
@@ -122,7 +122,7 @@ if Config.BOT_USERNAME and tbot:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://te.legra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
+                PIC = "https://telegra.ph/file/af4e0e424c2f6c56dc3dc.jpg"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     PIC,
@@ -135,7 +135,7 @@ if Config.BOT_USERNAME and tbot:
                 result = builder.document(
                     PIC,
                     text=he_ll,
-                    title="HellBot Alive",
+                    title="DangerCat Alive",
                     buttons=alv_btn,
                     link_preview=False,
                     parse_mode="HTML",
@@ -143,7 +143,7 @@ if Config.BOT_USERNAME and tbot:
             else:
                 result = builder.article(
                     text=he_ll,
-                    title="HellBot Alive",
+                    title="DangerCat Alive",
                     buttons=alv_btn,
                     link_preview=False,
                     parse_mode="HTML",
@@ -151,7 +151,7 @@ if Config.BOT_USERNAME and tbot:
 
         elif event.query.user_id in auth and query == "pm_warn":
             CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or None
-            HELL_FIRST = f"🔥 𝙃𝙚𝙡𝙡𝘽𝙤𝙩 𝙋𝙈 𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 🔥\n\nHello!! This is an automated message on behalf of {hell_mention}."
+            HELL_FIRST = f"🔥 dangercat 𝙋𝙈 𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 🔥\n\nHello!! This is an automated message on behalf of {hell_mention}."
             if CSTM_PMP:
                 HELL_FIRST += f"\n\n{CSTM_PMP}"
             a = gvarstat("PMPERMIT_PIC")
@@ -165,7 +165,7 @@ if Config.BOT_USERNAME and tbot:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://te.legra.ph/file/58df4d86400922aa32acd.jpg"
+                PIC = "https://telegra.ph/file/897399ac04d30697352e9.jpg"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     file=PIC,
@@ -181,7 +181,7 @@ if Config.BOT_USERNAME and tbot:
                 result = builder.document(
                     file=PIC,
                     text=HELL_FIRST,
-                    title="Hellbot PM Permit",
+                    title="dangercat PM Permit",
                     buttons=[
                         [Button.inline("📝 Request Approval", data="req")],
                         [Button.inline("🚫 Block", data="heheboi")],
@@ -192,7 +192,7 @@ if Config.BOT_USERNAME and tbot:
             else:
                 result = builder.article(
                     text=HELL_FIRST,
-                    title="Hellbot PM Permit",
+                    title="dngercat PM Permit",
                     buttons=[
                         [Button.inline("📝 Request Approval", data="req")],
                         [Button.inline("🚫 Block", data="heheboi")],
@@ -204,28 +204,28 @@ if Config.BOT_USERNAME and tbot:
         elif event.query.user_id in auth and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**",
+                text=f"**⚡DANGERCAT⚡️**",
                 buttons=[
-                    [Button.url("📑 Repo 📑", "https://github.com/The-HellBot/HellBot")],
-                    [Button.url("HellBot Network", "https://t.me/hellbot_networks")],
+                    [Button.url("📑 Repo 📑", "https://github.com/dangerbots/dangercat")],
+                    [Button.url("dangercat Network", "https://t.me/danger_bots")],
                 ],
             )
 
         else:
             result = builder.article(
-                "@Its_HellBot",
-                text="""**Hey! This is [Hêllẞø†](https://t.me/its_hellbot) \nYou can know more about me from the links given below 👇**""",
+                "@dangercat",
+                text="""**Hey! This is [dngerbots](https://t.me/danger_bots) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
                         Button.url("• Updates •", "https://t.me/Its_HellBot"),
                         Button.url("• Chat •", "https://t.me/hellbot_chats"),
                     ],
                     [
-                        Button.url("• Repo •", "https://github.com/The-HellBot/HellBot"),
-                        Button.url("• Docs •", "https://hellbot.tech"),
+                        Button.url("• Repo •", "https://github.com/dangerbots/dangercat"),
+                        Button.url("• dangerbots •", "https://t.me/danger_bots"),
                     ],
                     [
-                        Button.url("◈ HellBot Network ◈", "https://t.me/hellbot_networks"),
+                        Button.url("◈ dangerbot Network ◈", "https://t.me/danger_bots"),
                     ],
                 ],
                 link_preview=False,
@@ -239,7 +239,7 @@ if Config.BOT_USERNAME and tbot:
         if event.query.user_id in auth:
             reply_popup = "This is for Other Users..."
         else:
-            reply_popup = "🔰 This is Hêllẞø† PM Security to keep away unwanted retards from spamming PM !!"
+            reply_popup = "🔰 This is dngercat PM Security to keep away unwanted retards from spamming PM !!"
         await event.answer(reply_popup, cache_time=0, alert=True)
 
     @tbot.on(CallbackQuery(data=compile(b"req")))
@@ -302,7 +302,7 @@ if Config.BOT_USERNAME and tbot:
             if a:
                 help_pic = a.split(" ")[0]
             else:
-                help_pic = "https://te.legra.ph/file/3a48c5756d2a9763eafaf.jpg"
+                help_pic = "https://telegra.ph/file/897399ac04d30697352e9.jpg"
 
             if help_pic == "DISABLE":
                 await event.edit(
@@ -459,4 +459,4 @@ if Config.BOT_USERNAME and tbot:
             )
 
 
-# hellbot
+# dangercat
