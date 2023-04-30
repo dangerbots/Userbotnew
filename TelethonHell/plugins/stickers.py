@@ -122,8 +122,8 @@ async def kang(event):
                         Sticker.pack += 1
                     except ValueError:
                         Sticker.pack = 1
-                    packname = f"HellBot_{name}_{Sticker.pack}"
-                    packnick = f"{custompack}" if custompack else f"{nick}'s Hêllẞø† Vol.{Sticker.pack}"
+                    packname = f"dangercat_{name}_{Sticker.pack}"
+                    packnick = f"{custompack}" if custompack else f"{nick}'s dangercat Vol.{Sticker.pack}"
                     await hell.edit(f"__**Switching pack due to insufficient space ...**__ \n__Pack:__ `{Sticker.pack}`")
                     await conv.send_message(packname)
                     resp = await conv.get_response()
@@ -430,7 +430,7 @@ async def sticklet(event):
         ((512 - width) / 2, (512 - height) / 2), sticktext, font=font, fill=(R, G, B)
     )
     image_stream = io.BytesIO()
-    image_stream.name = "Hellbot.webp"
+    image_stream.name = "dangercat.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
     await event.client.send_message(
