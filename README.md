@@ -1,5 +1,5 @@
 <h1 align="center">
-  <b>danger cat</b>
+  <b> DANGER CAT </b>
 </h1>
 
 <p align="center">
