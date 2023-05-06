@@ -25,10 +25,6 @@
 
 -----
 
-<h1 align="center">
-  <b>Follow this format to make your own plugin for HellBot</b>
-</h1>
-
 
 
 ### To get more functions read codes in repo.
