@@ -19,7 +19,7 @@
     cached_dirs:
     - "/root/.cache/pip"
     volume_mappings:
-    - "/:/buddy/plugins-t"
+    - "/:/buddy/Userbotnew"
     cache_base_image: true
     shell: "BASH"
     variables:
