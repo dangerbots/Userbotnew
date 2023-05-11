@@ -7,7 +7,7 @@
   priority: "NORMAL"
   fail_on_prepare_env_warning: true
   actions:
-  - action: "Execute python3 -m TelethonHell"
+  - action: "Execute python3 -m TelethonCat"
     type: "BUILD"
     main_service_name: "Main"
     docker_image_name: "library/python"
@@ -15,7 +15,7 @@
     execute_commands:
     - "python -m pip install --upgrade pip"
     - "pip install -r requirements.txt"
-    - "python3 -m TelethonHell"
+    - "python3 -m TelethonCat"
     cached_dirs:
     - "/root/.cache/pip"
     volume_mappings:

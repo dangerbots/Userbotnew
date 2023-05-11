@@ -1,8 +1,6 @@
-# FOR SELF HOST
-# EDIT THIS FILE AND RENAME TO config.py TO MAKE THIS BOT WORKING
-# FILL THESE VALUES ACCORDINGLY.
 
-from HellConfig.config import Config
+
+from catconfig.config import Config
 
 
 class Development(Config):
@@ -18,5 +16,3 @@ class Development(Config):
     SUDO_HANDLER = "!"  # Custom Command Handler for sudo users.
 
 
-# end of required config
-# hellbot
