@@ -71,7 +71,7 @@ startup() {
     check_venv
     pip_works
     configs
-    python3 -m TelethonHell
+    python3 -m TelethonCat
 }
 
 startup
