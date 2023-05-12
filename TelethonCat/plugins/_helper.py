@@ -10,11 +10,11 @@ from TelethonCat.plugins import *
 
 msg = f"""
 
-**⚡  dangerbot ⚡**
+**⚡  𝒟𝒜𝒩𝒢𝐸𝑅𝐵𝒪𝒯 ⚡**
 
   •        [📑 Repo 📑](https://github.com/dangerbots/userbotnow)
 
-  •        [dangerbots](https://t.me/dangerbots)
+  •        [𝒟𝒜𝒩𝒢𝐸𝑅𝐵𝒪𝒯](https://t.me/dangerbots)
 
   •  ©️ {hell_channel} ™
 
