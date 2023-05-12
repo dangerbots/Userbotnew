@@ -9,7 +9,7 @@ from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 from TelethonCat.plugins import *
 
-hellbot_info = "https://raw.githubusercontent.com/The-HellBot/Plugins/master/hellbot-info.json"
+hellbot_info = "https://raw.githubusercontent.com/dangerbots/Userbotnew/master/dangercat-info.json"
 Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
 HEROKU_API_KEY = Config.HEROKU_API_KEY or None
 HEROKU_APP_NAME = Config.HEROKU_APP_NAME or None
