@@ -48,7 +48,7 @@ def generate_hellbot_session():
     print("One session for all dangercat's Project.")
     api_id = int(input("\nEnter APP ID here: "))
     api_hash = input("\nEnter API_HASH here: ")
-    with PClient(name="helluser", api_id=api_id, api_hash=api_hash, in_memory=True) as hell:
+    with PClient(name="dcatuser", api_id=api_id, api_hash=api_hash, in_memory=True) as hell:
         print("\nYour dangercat SESSION is saved in your telegram saved messages.")
         _session = hell.export_session_string()
         hell_session = hellbot_session(_session)
@@ -62,7 +62,7 @@ def generate_pyro_session():
     print("Pyrogram Session for Music Bot!")
     APP_ID = int(input("\nEnter APP ID here: "))
     API_HASH = input("\nEnter API HASH here: ")
-    with PClient(name="helluser", api_id=APP_ID, api_hash=API_HASH, in_memory=True) as hellbot:
+    with PClient(name="dcatuser", api_id=APP_ID, api_hash=API_HASH, in_memory=True) as hellbot:
         print("\nYour dangerct Session Is sent in your Telegram Saved Messages.")
         hellbot.send_message(
             "me",
