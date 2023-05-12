@@ -10,7 +10,7 @@ from TelethonCat.clients.session import H2, H3, H4, H5, Hell, HellBot
 from TelethonCat.utils.plug import load_module, plug_channel
 from TelethonCat.utils.startup import (join_it, logger_check, start_msg,
                                        update_sudo)
-from TelethonCat.version import __hellver__
+from TelethonCat.version import __dcatver__
 
 # Global Variables #
 HELL_PIC = "https://graph.org/file/d62f4f344a871d06c8c37.jpg"
@@ -46,7 +46,7 @@ async def plug_load(path):
 async def hell_is_on(total):
     await update_sudo()
     await logger_check(Hell)
-    await start_msg(HellBot, HELL_PIC, __hellver__, total)
+    await start_msg(HellBot, HELL_PIC, __dcatver__, total)
     await join_it(Hell)
     await join_it(H2)
     await join_it(H3)

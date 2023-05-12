@@ -39,7 +39,7 @@ from TelethonCat.utils.funcs import *
 from TelethonCat.utils.globals import *
 from TelethonCat.utils.plug import *
 from TelethonCat.utils.startup import *
-from TelethonCat.version import __hellver__, __telever__
+from TelethonCat.version import __dcatver__, __telever__
 
 cjb = "./catconfig/resources/pics/cjb.jpg"
 cat_logo = "./catconfig/resources/pics/dcatlogo.jpg"
@@ -52,7 +52,7 @@ spotify_logo = "./catconfig/resources/pics/spotify.jpg"
 cat_emoji = Config.EMOJI_IN_HELP
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
-hellbot_version = __hellver__
+hellbot_version = __dcatver__
 telethon_version = __telever__
 abuse_m = "Enabled" if str(Config.ABUSE).lower() in enabled_list else "Disabled"
 is_sudo = "True" if gvar_sql.gvarstat("SUDO_USERS") else "False"
