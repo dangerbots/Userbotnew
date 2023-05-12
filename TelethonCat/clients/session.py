@@ -91,8 +91,8 @@ else:
     H5 = None
 
 
-DangerBot = TelegramClient(
-    session="DangerCat",
+HellBot = TelegramClient(
+    session="Hell-TBot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
