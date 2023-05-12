@@ -20,7 +20,7 @@ async def restart(event):
         await event.client.disconnect()
 
 
-@cat_cmd(pattern="restart$")
+@dcat_cmd(pattern="restart$")
 async def re(hell):
     event = await eor(hell, "Restarting Hêllẞø† ...")
     try:
@@ -31,13 +31,13 @@ async def re(hell):
         LOGS.info(e)
 
 
-@cat_cmd(pattern="reload$")
+@dcat_cmd(pattern="reload$")
 async def rel(event):
     await eor(event, "**Reloaded HellBot!** \n\n__This might take a minute.__")
     await reload_hellbot()
 
 
-@cat_cmd(pattern="shutdown$")
+@dcat_cmd(pattern="shutdown$")
 async def down(event):
     await eor(event, "**[ ⚠️ ]** \n**Hêllẞø† is now turned off. Manually turn it on to start again.**")
     if HEROKU_APP is not None:
@@ -46,7 +46,7 @@ async def down(event):
         sys.exit(0)
 
 
-@cat_cmd(pattern="svar(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="svar(?:\s|$)([\s\S]*)")
 async def sett(event):
     lists = event.text.split(" ", 2)
     if len(lists) != 3:
@@ -67,7 +67,7 @@ async def sett(event):
     await eod(hell, f"**Variable Added Successfully!!** \n\n**• Variable:** `{var}` \n**» Value:** `{val}`")
 
 
-@cat_cmd(pattern="gvar(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="gvar(?:\s|$)([\s\S]*)")
 async def gett(event):
     lists = event.text.split(" ", 2)
     if len(lists) < 2:
@@ -86,7 +86,7 @@ async def gett(event):
     await hell.edit(f"**• OS VARIABLE:** `{var}`\n**» OS VALUE :** `{os_v}`\n\n**• DB VARIABLE:** `{var}`\n**» DB VALUE :** `{db_v}`\n")
 
 
-@cat_cmd(pattern="dvar(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="dvar(?:\s|$)([\s\S]*)")
 async def dell(event):
     lists = event.text.split(" ", 2)
     if len(lists) < 2:

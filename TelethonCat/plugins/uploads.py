@@ -8,7 +8,7 @@ from telethon.tl.types import DocumentAttributeVideo
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="upload(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="upload(?:\s|$)([\s\S]*)")
 async def upload(event):
     hell = await eor(event, "Uploader in action ...")
     reply = await event.get_reply_message()
@@ -35,7 +35,7 @@ async def upload(event):
         await eod(hell, "**404:** __File Not Found__")
 
 
-@cat_cmd(pattern="uploadir(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="uploadir(?:\s|$)([\s\S]*)")
 async def uploadir(event):
     hell = await eor(event, "Uploader in action ...")
     reply = await event.get_reply_message()
@@ -110,7 +110,7 @@ async def uploadir(event):
         await eod(hell, "**404:** __Directory Not Found__")
 
 
-@cat_cmd(pattern="uploadas(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="uploadas(?:\s|$)([\s\S]*)")
 async def uploadas(event):
     hell = await eor(event, "Uploader in action ...")
     reply = await event.get_reply_message()

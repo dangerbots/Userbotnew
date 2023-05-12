@@ -9,7 +9,7 @@ from TelethonCat.DB.gvar_sql import gvarstat
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="exec(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="exec(?:\s|$)([\s\S]*)")
 async def _(event):
     if gvarstat("USE_EVAL") == "TRUE":
         cmd = "".join(event.text.split(maxsplit=1)[1:])
@@ -52,7 +52,7 @@ async def _(event):
         )
 
 
-@cat_cmd(pattern="eval(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="eval(?:\s|$)([\s\S]*)")
 async def _(event):
     if gvarstat("USE_EVAL") == "TRUE":
         cmd = "".join(event.text.split(maxsplit=1)[1:])
@@ -117,7 +117,7 @@ async def aexec(code, smessatatus):
     )
 
 
-@cat_cmd(pattern="bash ([\s\S]*)")
+@dcat_cmd(pattern="bash ([\s\S]*)")
 async def _(event):
     PROCESS_RUN_TIME = 100
     cmd = event.pattern_match.group(1)

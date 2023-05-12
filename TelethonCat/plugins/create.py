@@ -3,7 +3,7 @@ from telethon.tl.types import MessageEntityMentionName
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="create (b|g|c) ([\s\S]*)")
+@dcat_cmd(pattern="create (b|g|c) ([\s\S]*)")
 async def _(event):
     type_of_group = event.pattern_match.group(1)
     group_name = event.pattern_match.group(2)
@@ -61,7 +61,7 @@ async def _(event):
         await hell.edit(f"Read `{hl}plinfo create` to know how to use me")
 
 
-@cat_cmd(pattern="link ([\s\S]*)")
+@dcat_cmd(pattern="link ([\s\S]*)")
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
     if not user:

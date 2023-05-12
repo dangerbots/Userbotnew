@@ -13,7 +13,7 @@ msg = f"""
 """
 
 
-@cat_cmd(pattern="repo$")
+@dcat_cmd(pattern="repo$")
 async def repo(event):
     ForGo10God, _, _ = await client_id(event)
     try:
@@ -25,7 +25,7 @@ async def repo(event):
         await eor(event, msg)
 
 
-@cat_cmd(pattern="help$")
+@dcat_cmd(pattern="help$")
 async def _(event):
     if Config.BOT_USERNAME:
         try:
@@ -67,7 +67,7 @@ async def _(event):
         await parse_error(event, "__Please recheck__ `BOT_TOKEN` __on Heroku.__", False)
 
 
-@cat_cmd(pattern="plinfo(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="plinfo(?:\s|$)([\s\S]*)")
 async def hellbott(event):
     args = event.pattern_match.group(1).lower()
     if args:
@@ -94,7 +94,7 @@ async def hellbott(event):
         await eor(event, "Please Specify A Module Name Of Which You Want Info" + "\n\n" + string)
 
 
-@cat_cmd(pattern="cmdinfo(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="cmdinfo(?:\s|$)([\s\S]*)")
 async def cmdinfo(event):
     cmd = str(event.text[9:]).lower()
     try:

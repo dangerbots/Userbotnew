@@ -8,7 +8,7 @@ from gtts import gTTS
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="meaning ([\s\S]*)")
+@dcat_cmd(pattern="meaning ([\s\S]*)")
 async def _(event):
     word = event.text[9:]
     try:
@@ -22,7 +22,7 @@ async def _(event):
         await parse_error(event, e)
 
 
-@cat_cmd(pattern="trt(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="trt(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.text[5:]
     if event.reply_to_msg_id:
@@ -51,7 +51,7 @@ async def _(event):
         await parse_error(event, exc)
 
 
-@cat_cmd(pattern="trc$")
+@dcat_cmd(pattern="trc$")
 async def _(hell):
     await eor(
         hell,
@@ -60,7 +60,7 @@ async def _(hell):
     )
 
 
-@cat_cmd(pattern="voice(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="voice(?:\s|$)([\s\S]*)")
 async def _(event):
     hell = await eor(event, "Preparing Voice....")
     input_str = event.pattern_match.group(1)

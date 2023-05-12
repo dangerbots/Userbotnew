@@ -17,7 +17,7 @@ from TelethonCat.DB.gvar_sql import addgvar, gvarstat
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="kang(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="kang(?:\s|$)([\s\S]*)")
 async def kang(event):
     hell = await eor(event, "__**Starting sticker kang process ...**__")
     reply = await event.get_reply_message()
@@ -240,7 +240,7 @@ async def kang(event):
     )
 
 
-@cat_cmd(pattern="pkang(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="pkang(?:\s|$)([\s\S]*)")
 async def _(event):
     hell = await eor(event, "`Preparing pack kang...`")
     reply = await event.get_reply_message()
@@ -324,7 +324,7 @@ async def _(event):
     await to_del.delete()
 
 
-@cat_cmd(pattern="stkrinfo$")
+@dcat_cmd(pattern="stkrinfo$")
 async def get_pack_info(event):
     reply = await event.get_reply_message()
     if not reply and not reply.document:
@@ -363,7 +363,7 @@ async def get_pack_info(event):
     await hell.edit(OUTPUT, parse_mode='HTML')
 
 
-@cat_cmd(pattern="delst(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="delst(?:\s|$)([\s\S]*)")
 async def _(event):
     reply = await event.get_reply_message()
     if not reply:
@@ -381,7 +381,7 @@ async def _(event):
         await hell.edit(fourth.text)
 
 
-@cat_cmd(pattern="editst(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="editst(?:\s|$)([\s\S]*)")
 async def _(event):
     reply = await event.get_reply_message()
     if not reply:
@@ -408,7 +408,7 @@ async def _(event):
         await hell.edit(f"{sixth.text}")
 
 
-@cat_cmd(pattern="text(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="text(?:\s|$)([\s\S]*)")
 async def sticklet(event):
     R = random.randint(0, 256)
     G = random.randint(0, 256)
@@ -445,7 +445,7 @@ async def sticklet(event):
         pass
 
 
-@cat_cmd(pattern="waifu(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="waifu(?:\s|$)([\s\S]*)")
 async def waifu(event):
     text = event.pattern_match.group(1)
     if not text:

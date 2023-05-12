@@ -3,89 +3,89 @@ import random
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="sing$")
+@dcat_cmd(pattern="sing$")
 async def _(e):
     txt = random.choice(SONGS)
     await eor(e, txt)
 
 
-@cat_cmd(pattern="hpotter$")
+@dcat_cmd(pattern="hpotter$")
 async def _(e):
     txt = random.choice(HARRY)
     await eor(e, txt)
 
 
-@cat_cmd(pattern="gott$")
+@dcat_cmd(pattern="gott$")
 async def _(e):
     txt = random.choice(GOTT)
     await eor(e, txt)
 
 
-@cat_cmd(pattern="gotm$")
+@dcat_cmd(pattern="gotm$")
 async def _(e):
     txt = random.choice(GOTM)
     await eor(e, txt, link_preview=True)
 
 
-@cat_cmd(pattern="bello$")
+@dcat_cmd(pattern="bello$")
 async def _(e):
     txt = random.choice(BELLO)
     await eor(e, txt)
 
 
-@cat_cmd(pattern="tip$")
+@dcat_cmd(pattern="tip$")
 async def _(e):
     txt = random.choice(TIPS)
     await eor(e, txt)
 
 
-@cat_cmd(pattern="qt$")
+@dcat_cmd(pattern="qt$")
 async def _(e):
     txt = random.choice(QT)
     await eor(e, txt)
 
 
-@cat_cmd(pattern="logic$")
+@dcat_cmd(pattern="logic$")
 async def _(e):
     txt = random.choice(LOGIC)
     await eor(e, txt)
 
 
-@cat_cmd(pattern="snow$")
+@dcat_cmd(pattern="snow$")
 async def _(e):
     txt = random.choice(SNOW)
     await eor(e, txt)
 
 
-@cat_cmd(pattern="shayri$")
+@dcat_cmd(pattern="shayri$")
 async def _(e):
     _, _, hell_mention = await client_id(e)
     txt = random.choice(SHAYRI)
     await eor(e, txt.format(hell_mention))
 
 
-@cat_cmd(pattern="hflirt$")
+@dcat_cmd(pattern="hflirt$")
 async def _(e):
     _, _, hell_mention = await client_id(e)
     txt = random.choice(HFLIRT)
     await eor(e, txt.format(hell_mention))
 
 
-@cat_cmd(pattern="eflirt$")
+@dcat_cmd(pattern="eflirt$")
 async def _(e):
     _, _, hell_mention = await client_id(e)
     txt = random.choice(EFLIRT)
     await eor(e, txt.format(hell_mention))
 
 
-@cat_cmd(pattern="attitude$")
+@dcat_cmd(pattern="attitude$")
 async def _(e):
     _, _, hell_mention = await client_id(e)
     txt = random.choice(ATTITUDE)
     await eor(e, txt.format(hell_mention))
 
 
-@cat_cmd(pattern="gbye$")
+@dcat_cmd(pattern="gbye$")
 async def _(e):
     _, _, hell_mention = await client_id(e)
     txt = random.choice(GBYE)

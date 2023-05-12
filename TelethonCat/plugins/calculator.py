@@ -6,7 +6,7 @@ import traceback
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="calc(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="calc(?:\s|$)([\s\S]*)")
 async def _(event):
     cmd = event.text.split(" ", 1)[1]
     hell = await eor(event, "Calculating ...")
@@ -42,7 +42,7 @@ async def aexec(code, event):
     return await locals()["__aexec"](event)
 
 
-@cat_cmd(pattern="math(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="math(?:\s|$)([\s\S]*)")
 async def maths(event):
     lists = event.text.split(" ")
     if len(lists) <= 2:
@@ -69,7 +69,7 @@ async def maths(event):
     await eor(event, f"**Math:** __{lists[1]} {lists[2]}__ \n==> `{output}`")
 
 
-@cat_cmd(pattern="mathflag$")
+@dcat_cmd(pattern="mathflag$")
 async def mathflag(event):
     flags = [
         "sin", "cos", "tan", "square", "cube", "sqroot", "factorial", "power"

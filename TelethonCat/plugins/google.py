@@ -18,7 +18,7 @@ from wikipedia import summary
 from wikipedia.exceptions import DisambiguationError, PageError
 
 
-@cat_cmd(pattern="wiki(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="wiki(?:\s|$)([\s\S]*)")
 async def _(event):
     match = event.text[6:]
     result = None
@@ -48,7 +48,7 @@ async def _(event):
     await eor(event, "**Search:**\n`" + match + "`\n\n**Result:**\n" + f"__{result}__")
 
 
-@cat_cmd(pattern="google(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="google(?:\s|$)([\s\S]*)")
 async def google(event):
     input_str = event.pattern_match.group(1)
     if not input_str:
@@ -76,7 +76,7 @@ async def google(event):
     )
 
 
-@cat_cmd(pattern="img(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="img(?:\s|$)([\s\S]*)")
 async def img(event):
     sim = event.pattern_match.group(1)
     if not sim:
@@ -104,7 +104,7 @@ async def img(event):
     await hell.delete()
 
 
-@cat_cmd(pattern="reverse(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="reverse(?:\s|$)([\s\S]*)")
 async def _(event):
     reply = await event.get_reply_message()
     if not reply:
@@ -149,7 +149,7 @@ async def _(event):
     os.remove(dl)
 
 
-@cat_cmd(pattern="gps(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="gps(?:\s|$)([\s\S]*)")
 async def gps(event):
     reply_to_id = event.message
     if event.reply_to_msg_id:
@@ -171,7 +171,7 @@ async def gps(event):
         await eod(hell, "I coudn't find it😫")
 
 
-@cat_cmd(pattern="webshot ([\s\S]*)")
+@dcat_cmd(pattern="webshot ([\s\S]*)")
 async def _(event):
     if Config.GOOGLE_CHROME_BIN is None:
         return await parse_error(event, "Google chrome not installed.")
@@ -224,7 +224,7 @@ async def _(event):
         await parse_error(hell, traceback.format_exc())
 
 
-@cat_cmd(pattern="cricket$")
+@dcat_cmd(pattern="cricket$")
 async def _(event):
     score_page = "http://static.cricinfo.com/rss/livescores.xml"
     page = urllib.request.urlopen(score_page)

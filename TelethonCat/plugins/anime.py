@@ -3,7 +3,7 @@ from telethon.errors.rpcerrorlist import ChatSendMediaForbiddenError
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="anime(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="anime(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.text[7:]
     if query == "":
@@ -26,7 +26,7 @@ async def _(event):
         os.remove(pic)
 
 
-@cat_cmd(pattern="manga(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="manga(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.text[7:]
     if query == "":
@@ -47,7 +47,7 @@ async def _(event):
         os.remove(pic)
 
 
-@cat_cmd(pattern="character(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="character(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.text[11:]
     if query == "":
@@ -69,7 +69,7 @@ async def _(event):
         os.remove(img)
 
 
-@cat_cmd(pattern="fillers(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="fillers(?:\s|$)([\s\S]*)")
 async def canon(event):
     hell = event.text[9:]
     if hell == "":
@@ -112,7 +112,7 @@ async def canon(event):
     await nub.edit(hellbot)
 
 
-@cat_cmd(pattern="airing(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="airing(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.text[8:]
     hell = await eor(event, f"__Searching airing details for__ `{query}`")
@@ -136,7 +136,7 @@ async def _(event):
         os.remove(coverImg)
 
 
-@cat_cmd(pattern="aniuser(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="aniuser(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.text[9:]
     hell = await eor(event, "Searching user's Anilist Stats...")
@@ -162,7 +162,7 @@ async def _(event):
         os.remove(pic)
 
 
-@cat_cmd(pattern="aniquote$")
+@dcat_cmd(pattern="aniquote$")
 async def quote(event):
     hell = await eor(event, "(ﾉ◕ヮ◕)ﾉ*.✧")
     q = requests.get("https://animechan.vercel.app/api/random").json()

@@ -9,7 +9,7 @@ from TelethonCat.DB.gvar_sql import gvarstat
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="autoname$")
+@dcat_cmd(pattern="autoname$")
 async def _(event):
     hell = await eor(event, "`Starting AutoName Please Wait`")
     _id, HELL_USER, _ment = await client_id(event)
@@ -30,7 +30,7 @@ async def _(event):
         await asyncio.sleep(60)
 
 
-@cat_cmd(pattern="autobio$")
+@dcat_cmd(pattern="autobio$")
 async def _(event):
     hell = await eor(event, "Starting AutoBio...")
     await hell.edit("AutoBio Activated...")
@@ -48,7 +48,7 @@ async def _(event):
         await asyncio.sleep(60)
 
 
-@cat_cmd(pattern="reserved$")
+@dcat_cmd(pattern="reserved$")
 async def mine(event):
     result = await event.client(GetAdminedPublicChannelsRequest())
     output_str = ""

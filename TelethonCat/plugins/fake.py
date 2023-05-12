@@ -7,7 +7,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="fpic$")
+@dcat_cmd(pattern="fpic$")
 async def _(event):
     _, _, hell_mention = await client_id(event)
     hell = await eor(event, "`Creating a fake face...`")
@@ -28,7 +28,7 @@ async def _(event):
     os.system("HELLBOT.jpg")
 
 
-@cat_cmd(pattern="fake(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="fake(?:\s|$)([\s\S]*)")
 async def _(event):
     await event.delete()
     input_str = event.pattern_match.group(1)
@@ -39,7 +39,7 @@ async def _(event):
         await asyncio.sleep(86400)
 
 
-@cat_cmd(pattern="gbam$")
+@dcat_cmd(pattern="gbam$")
 async def gbun(event):
     gbunVar = event.text
     gbunVar = gbunVar[6:]

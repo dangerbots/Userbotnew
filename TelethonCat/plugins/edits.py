@@ -5,7 +5,7 @@ import pyfiglet
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="type(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="type(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     shiiinabot = "\u2060"
@@ -34,7 +34,7 @@ async def _(event):
         await asyncio.sleep(0.3)
 
 
-@cat_cmd(pattern="emoji(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="emoji(?:\s|$)([\s\S]*)")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(0, 16)
@@ -57,67 +57,67 @@ async def _(event):
             await hell.edit(animation_chars[i % 2])
 
 
-@cat_cmd(pattern=f"gendar$")
+@dcat_cmd(pattern=f"gendar$")
 async def metoo(e):
     txt = random.choice(GENDER)
     await eor(e, txt)
 
 
-@cat_cmd(pattern=f"shrug$")
+@dcat_cmd(pattern=f"shrug$")
 async def metoo(e):
     txt = random.choice(SHRUG)
     await eor(e, txt)
 
 
-@cat_cmd(pattern=f"dogge")
+@dcat_cmd(pattern=f"dogge")
 async def metoo(e):
     txt = random.choice(DOG)
     await eor(e, txt)
 
 
-@cat_cmd(pattern=f"mesed$")
+@dcat_cmd(pattern=f"mesed$")
 async def metoo(e):
     txt = random.choice(SED)
     await eor(e, txt)
 
 
-@cat_cmd(pattern=f"medead$")
+@dcat_cmd(pattern=f"medead$")
 async def metoo(e):
     txt = random.choice(DEAD)
     await eor(e, txt)
 
 
-@cat_cmd(pattern=f"confused$")
+@dcat_cmd(pattern=f"confused$")
 async def metoo(e):
     txt = random.choice(CONFUSED)
     await eor(e, txt)
 
 
-@cat_cmd(pattern=f"lobb$")
+@dcat_cmd(pattern=f"lobb$")
 async def metoo(e):
     txt = random.choice(LOB)
     await eor(e, txt)
 
 
-@cat_cmd(pattern=f"wut$")
+@dcat_cmd(pattern=f"wut$")
 async def metoo(e):
     txt = random.choice(WTF)
     await eor(e, txt)
 
 
-@cat_cmd(pattern=f"wavee$")
+@dcat_cmd(pattern=f"wavee$")
 async def metoo(e):
     txt = random.choice(WAVING)
     await eor(e, txt)
 
 
-@cat_cmd(pattern=f"hehe$")
+@dcat_cmd(pattern=f"hehe$")
 async def metoo(e):
     txt = random.choice(EMOTICONS)
     await eor(e, txt)
 
 
-@cat_cmd(pattern="figlet(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="figlet(?:\s|$)([\s\S]*)")
 async def figlet(event):
     CMD_FIG = {
         "slant": "slant",

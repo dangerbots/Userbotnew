@@ -24,7 +24,7 @@ async def get_tz(con):
         return
 
 
-@cat_cmd(pattern="climate(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="climate(?:\s|$)([\s\S]*)")
 async def get_weather(event):
     if not OWM_API:
         return await parse_error(event, "__No API key found. Get an API from [here](https://openweathermap.org/) first.__", False)
@@ -119,7 +119,7 @@ async def get_weather(event):
     )
 
 
-@cat_cmd(pattern="setcity(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="setcity(?:\s|$)([\s\S]*)")
 @errors_handler
 async def set_default_city(event):
     if not OWM_API:
@@ -161,7 +161,7 @@ async def set_default_city(event):
     await eor(event, f"**Set default city as** `{cityname}, {fullc_n}`")
 
 
-@cat_cmd(pattern="weather(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="weather(?:\s|$)([\s\S]*)")
 async def _(event):
     global DEFCITY
     reply = await event.get_reply_message()

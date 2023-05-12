@@ -6,7 +6,7 @@ from telethon.utils import get_extension
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="paste(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="paste(?:\s|$)([\s\S]*)")
 async def _(event):
     hell = await eor(event, "`Pasting ....`")
     lists = event.text.split(" ", 1)
@@ -56,7 +56,7 @@ async def _(event):
         await parse_error(hell, e)
 
 
-@cat_cmd(pattern="neko(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="neko(?:\s|$)([\s\S]*)")
 async def _(event):
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)

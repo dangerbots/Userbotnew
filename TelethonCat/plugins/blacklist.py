@@ -20,7 +20,7 @@ async def on_new_message(event):
             break
 
 
-@cat_cmd(pattern="addblacklist(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="addblacklist(?:\s|$)([\s\S]*)")
 async def on_add_black_list(event):
     text = event.pattern_match.group(1)
     to_blacklist = list({trigger.strip() for trigger in text.split("\n") if trigger.strip()})
@@ -29,7 +29,7 @@ async def on_add_black_list(event):
     await eor(event, f"__Added__ `{to_blacklist}` __triggers to the blacklist in the current chat.__")
 
 
-@cat_cmd(pattern="rmblacklist(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="rmblacklist(?:\s|$)([\s\S]*)")
 async def on_delete_blacklist(event):
     text = event.pattern_match.group(1)
     to_unblacklist = list({trigger.strip() for trigger in text.split("\n") if trigger.strip()})
@@ -41,7 +41,7 @@ async def on_delete_blacklist(event):
     await eor(event, f"__Removed__ `{successful} / {len(to_unblacklist)}` __from the blacklist.__")
 
 
-@cat_cmd(pattern="listblacklist$")
+@dcat_cmd(pattern="listblacklist$")
 async def on_view_blacklist(event):
     all_blacklisted = sq.get_chat_blacklist(event.chat_id)
     if len(all_blacklisted) > 0:

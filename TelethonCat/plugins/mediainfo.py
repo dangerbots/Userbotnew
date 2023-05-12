@@ -5,7 +5,7 @@ import time
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="mediainfo$")
+@dcat_cmd(pattern="mediainfo$")
 async def mediainfo(event):
     HELL_MEDIA = None
     reply = await event.get_reply_message()

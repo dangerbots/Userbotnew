@@ -26,7 +26,7 @@ twentytwo = "卂 乃 匚 ᗪ 乇 千 Ꮆ 卄 丨 ﾌ Ҝ ㄥ 爪 几 ㄖ 卩 Ɋ �
 twentythree = "ﾑ 乃 ᄃ り 乇 ｷ ム ん ﾉ ﾌ ズ ﾚ ﾶ 刀 の ｱ ゐ 尺 丂 ｲ ひ √ W ﾒ ﾘ 乙"
 twentyfour = "ą ც ƈ ɖ ɛ ʄ ɠ ɧ ı ʝ ƙ Ɩ ɱ ŋ ơ ℘ զ ཞ ʂ ɬ ų ۷ ῳ ҳ ყ ʑ"
 
-@cat_cmd(pattern="font(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="font(?:\s|$)([\s\S]*)")
 async def font(event):
     hell = await eor(event, "Changing font...")
     flag = event.text[6:]

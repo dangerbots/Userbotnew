@@ -11,7 +11,7 @@ from telethon.tl.types import DocumentAttributeAudio
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="song(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="song(?:\s|$)([\s\S]*)")
 async def songs(event):
     ForGo10God, _, hell_mention = await client_id(event)
     lists = event.text.split(" ", 1)
@@ -72,7 +72,7 @@ async def songs(event):
         pass
 
 
-@cat_cmd(pattern="vsong(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="vsong(?:\s|$)([\s\S]*)")
 async def vsong(event):
     ForGo10God, _, hell_mention = await client_id(event)
     lists = event.text.split(" ", 1)
@@ -121,7 +121,7 @@ async def vsong(event):
         await parse_error(hell, e)
 
 
-@cat_cmd(pattern="lyrics(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="lyrics(?:\s|$)([\s\S]*)")
 async def lyrics(event):
     if not Config.LYRICS_API:
         return await parse_error(event, "`LYRICS_API` is not configured!", False)
@@ -158,7 +158,7 @@ async def lyrics(event):
         await parse_error(hell, "Unexpected Error Occured.")
 
 
-@cat_cmd(pattern="wsong(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="wsong(?:\s|$)([\s\S]*)")
 async def _(event):
     if not event.reply_to_msg_id:
         return await eor(event, "Reply to a mp3 file.")

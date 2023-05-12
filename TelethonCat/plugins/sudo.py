@@ -3,7 +3,7 @@ from TelethonCat.DB.gvar_sql import addgvar, delgvar, gvarstat
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="sudo$")
+@dcat_cmd(pattern="sudo$")
 async def sudo(event):
     if Config.SUDO_USERS:
         if gvarstat("SUDO_USERS"):
@@ -13,7 +13,7 @@ async def sudo(event):
         await eod(event, f"📍 **Sudo:**  `Disabled`")
 
 
-@cat_cmd(pattern="addsudo(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="addsudo(?:\s|$)([\s\S]*)")
 async def add(event):
     lists = event.text.split(" ", 1)
     hell = await eor(event, "**🚀 Adding Sudo User...**")
@@ -42,7 +42,7 @@ async def add(event):
     )
 
 
-@cat_cmd(pattern="rmsudo(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="rmsudo(?:\s|$)([\s\S]*)")
 async def _(event):
     lists = event.text.split(" ", 1)
     hell = await eor(event, "**🚫 Removing Sudo User...**")

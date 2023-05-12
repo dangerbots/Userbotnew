@@ -4,7 +4,7 @@ from TelethonCat.DB import snip_sql as sq
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern=r"\#(\S+)")
+@dcat_cmd(pattern=r"\#(\S+)")
 async def incom_note(event):
     if Config.LOGGER_ID == 0:
         return
@@ -38,7 +38,7 @@ async def incom_note(event):
         pass
 
 
-@cat_cmd(pattern="snip(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="snip(?:\s|$)([\s\S]*)")
 async def add_snip(event):
     if Config.LOGGER_ID == 0:
         return await eod(event, "You need to setup  `LOGGER_ID`  to save snips...")
@@ -81,7 +81,7 @@ async def add_snip(event):
     return await eor(event, success.format("added", trigger))
 
 
-@cat_cmd(pattern="rmsnip(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="rmsnip(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = (event.pattern_match.group(1)).lower()
     if not input_str:
@@ -95,7 +95,7 @@ async def _(event):
         await eod(event, "No snip saved with this trigger.")
 
 
-@cat_cmd(pattern="listsnip$")
+@dcat_cmd(pattern="listsnip$")
 async def lsnote(event):
     all_snips = sq.get_notes()
     OUT_STR = "Available Snips:\n"

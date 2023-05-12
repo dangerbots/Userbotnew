@@ -5,7 +5,7 @@ from subprocess import run as runapp
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="hash(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="hash(?:\s|$)([\s\S]*)")
 @errors_handler
 async def gethash(event):
     hell = await eor(event, "Processing...")
@@ -50,7 +50,7 @@ async def gethash(event):
         await hell.edit(ans)
 
 
-@cat_cmd(pattern="b64 (en|de) ([\s\S]*)")
+@dcat_cmd(pattern="b64 (en|de) ([\s\S]*)")
 @errors_handler
 async def endecrypt(event):
     if event.pattern_match.group(1) == "en":

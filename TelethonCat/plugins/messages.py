@@ -18,7 +18,7 @@ async def all_groups_id(hell):
     return hellgroups
 
 
-@cat_cmd(pattern="frwd$")
+@dcat_cmd(pattern="frwd$")
 async def _(event):
     if Config.LOGGER_ID == 0:
         await parse_error(event, "`LOGGER_ID` not configured.", False)
@@ -34,7 +34,7 @@ async def _(event):
         await event.delete()
 
 
-@cat_cmd(pattern="resend$")
+@dcat_cmd(pattern="resend$")
 async def _(event):
     m = await event.get_reply_message()
     await event.delete()
@@ -42,7 +42,7 @@ async def _(event):
         await event.respond(m)
 
 
-@cat_cmd(pattern="copy$")
+@dcat_cmd(pattern="copy$")
 async def _(event):
     m = await event.get_reply_message()
     await event.delete()
@@ -50,7 +50,7 @@ async def _(event):
         await event.client.send_message(event.chat_id, m, reply_to=m.id)
 
 
-@cat_cmd(pattern="fpost(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="fpost(?:\s|$)([\s\S]*)")
 async def _(event):
     global groupsid
     global msg_cache

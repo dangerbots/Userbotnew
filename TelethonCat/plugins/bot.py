@@ -20,7 +20,7 @@ ping_txt = """
 """
 
 
-@cat_cmd(pattern="ping$")
+@dcat_cmd(pattern="ping$")
 async def pong(event):
     start = datetime.datetime.now()
     a = gvarstat("PING_PIC")
@@ -50,7 +50,7 @@ async def pong(event):
         await hell.edit(ping_txt.format(ms, uptime, hell_mention), parse_mode="HTML")
 
 
-@cat_cmd(pattern="limits$")
+@dcat_cmd(pattern="limits$")
 async def is_limited(event):
     chat = "@SpamBot"
     msg = await eor(event, "Checking your account limit...")
@@ -66,7 +66,7 @@ async def is_limited(event):
         await event.client.delete_messages(conv.chat_id, [first.id, response.id])
 
 
-@cat_cmd(pattern="kickme$")
+@dcat_cmd(pattern="kickme$")
 async def leave(event):
     hell = await eor(event, "😪 **KThnxBye** See u all in hell!!")
     time.sleep(1)
@@ -76,13 +76,13 @@ async def leave(event):
         await eod(hell, "**Is this even a group?😑**")
 
 
-@cat_cmd(pattern="dc$")
+@dcat_cmd(pattern="dc$")
 async def _(event):
     result = await event.client(functions.help.GetNearestDcRequest())
     await eor(event, result.stringify())
 
 
-@cat_cmd(pattern="config$")
+@dcat_cmd(pattern="config$")
 async def _(event):
     result = await event.client(functions.help.GetConfigRequest())
     result = result.stringify()
@@ -90,7 +90,7 @@ async def _(event):
     await eor(event, "Config Saved In You Heroku Logs.")
 
 
-@cat_cmd(pattern="vars(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="vars(?:\s|$)([\s\S]*)")
 async def lst(event):
     flag = str(event.text[6:9]).lower()
     if flag and flag == "-db":
@@ -107,7 +107,7 @@ async def lst(event):
         await hell.edit(osx)
 
 
-@cat_cmd(pattern="schd(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="schd(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     ttl = 0
@@ -126,7 +126,7 @@ async def _(event):
         await eod(event, message)
 
 
-@cat_cmd(pattern="dm(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="dm(?:\s|$)([\s\S]*)")
 async def _(event):
     lists = event.text.split(" ", 2)
     reply = await event.get_reply_message()
@@ -152,7 +152,7 @@ async def _(event):
         await eod(event, f"**SYNTAX EXAMPLE**\n\n~ `{hl}dm @ForGo10God Hey Hell!` \n~ `{hl}dm @ForGo10God <reply to a msg>`")
 
 
-@cat_cmd(pattern="chain$")
+@dcat_cmd(pattern="chain$")
 async def _(event):
     hell = await eor(event, "Counting...")
     count = -1

@@ -2,7 +2,7 @@ from catconfig import Config, db_config, os_config
 from TelethonCat import HEROKU_APP, StartTime
 from TelethonCat.clients.client_list import (client_id, clients_list,
                                              get_user_id)
-from TelethonCat.clients.decs import cat_cmd, dcat_handler
+from TelethonCat.clients.decs import dcat_cmd, dcat_handler
 from TelethonCat.clients.instaAPI import InstaGram
 from TelethonCat.clients.logger import LOGGER
 from TelethonCat.clients.session import (H2, H3, H4, H5, Hell, HellBot,

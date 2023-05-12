@@ -38,7 +38,7 @@ async def forcesub(event):
         await tbot.send_message(event.chat_id, capt, buttons=btns)
 
 
-@cat_cmd(pattern="fsub(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="fsub(?:\s|$)([\s\S]*)")
 async def _(event):
     if event.is_private:
         await parse_error(event, "This is meant to be used in groups only!!")
@@ -63,7 +63,7 @@ async def _(event):
     await eor(event, "Implementing **Force Subscribe** In This Channel !!")
 
 
-@cat_cmd(pattern="rmfsub$")
+@dcat_cmd(pattern="rmfsub$")
 async def removef(event):
     if is_fsub(event.chat_id):
         rm_fsub(event.chat_id)
@@ -72,7 +72,7 @@ async def removef(event):
         return await eod(event, "I don't think force sub was activated here.")
 
 
-@cat_cmd(pattern="chfsub$")
+@dcat_cmd(pattern="chfsub$")
 async def getfsub(event):
     x = is_fsub(event.chat_id)
     if not x:
@@ -89,7 +89,7 @@ async def getfsub(event):
     )
 
 
-@cat_cmd(pattern="lsfsub$")
+@dcat_cmd(pattern="lsfsub$")
 async def list(event):
     channels = all_fsub()
     CHANNEL_LIST = "**🚀 Fsub Enabled For & In :**\n\n"

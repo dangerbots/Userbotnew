@@ -7,7 +7,7 @@ from pathlib import Path
 from catconfig import Config
 from telethon.tl.types import InputMessagesFilterDocument
 from TelethonCat.clients.client_list import client_id
-from TelethonCat.clients.decs import cat_cmd
+from TelethonCat.clients.decs import dcat_cmd
 from TelethonCat.clients.logger import LOGGER as LOGS
 from TelethonCat.clients.session import H2, H3, H4, H5, Hell, HellBot
 from TelethonCat.utils.cmds import CmdHelp
@@ -59,7 +59,7 @@ def load_module(shortname):
         mod.eod = delete_hell
         mod.Var = Config
         mod.admin_cmd = admin_cmd
-        mod.cat_cmd = cat_cmd
+        mod.dcat_cmd = dcat_cmd
         mod.sudo_cmd = sudo_cmd
         sys.modules["userbot.utils"] = TelethonCat
         sys.modules["userbot"] = TelethonCat

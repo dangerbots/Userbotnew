@@ -10,7 +10,7 @@ from humanize import naturalsize
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="direct(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="direct(?:\s|$)([\s\S]*)")
 async def direct_link_generator(request):
     if request.fwd_from:
         return

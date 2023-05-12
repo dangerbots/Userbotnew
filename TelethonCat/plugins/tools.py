@@ -16,7 +16,7 @@ from TelethonCat.plugins import *
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 
-@cat_cmd(pattern="time(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="time(?:\s|$)([\s\S]*)")
 async def _(event):
     current_time = datetime.datetime.now().strftime(
         "⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\
@@ -55,7 +55,7 @@ async def _(event):
     await eod(event, "Created sticker in {} seconds".format(time_taken_ms))
 
 
-@cat_cmd(pattern="decode$")
+@dcat_cmd(pattern="decode$")
 async def parseqr(event):
     if not os.path.isdir(Config.TEMP_DIR):
         os.makedirs(Config.TEMP_DIR)
@@ -87,7 +87,7 @@ async def parseqr(event):
         os.remove(downloaded_file_name)
 
 
-@cat_cmd(pattern="barcode(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="barcode(?:\s|$)([\s\S]*)")
 async def _(event):
     hellevent = await eor(event, "...")
     start = datetime.datetime.now()
@@ -136,7 +136,7 @@ async def _(event):
     await hellevent.delete()
 
 
-@cat_cmd(pattern="makeqr(?: |$)([\s\S]*)")
+@dcat_cmd(pattern="makeqr(?: |$)([\s\S]*)")
 async def make_qr(event):
     input_str = event.pattern_match.group(1)
     message = f"SYNTAX: `{hl}makeqr <long text to include>`"
@@ -172,7 +172,7 @@ async def make_qr(event):
     await event.delete()
 
 
-@cat_cmd(pattern="calendar(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="calendar(?:\s|$)([\s\S]*)")
 async def _(event):
     lists = event.text.split(" ", 1)
     year = datetime.datetime.now().year
@@ -188,7 +188,7 @@ async def _(event):
         return await parse_error(event, e)
 
 
-@cat_cmd(pattern="currency(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="currency(?:\s|$)([\s\S]*)")
 async def _(event):
     if not Config.CURRENCY_API:
         return await parse_error(event, "`CURRENCY_API` __not configured.__", False)
@@ -218,7 +218,7 @@ async def _(event):
         await parse_error(hell, e)
 
 
-@cat_cmd(pattern="currencies$")
+@dcat_cmd(pattern="currencies$")
 async def currencylist(event):
     if not Config.CURRENCY_API:
         return await parse_error(event, "`CURRENCY_API` __not configured.__", False)
@@ -246,7 +246,7 @@ async def currencylist(event):
         await parse_error(hell, e)
 
 
-@cat_cmd(pattern="ifsc(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="ifsc(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     url = "https://ifsc.razorpay.com/{}".format(input_str)
@@ -259,7 +259,7 @@ async def _(event):
         await eor(event, "`{}`: {}".format(input_str, r.text))
 
 
-@cat_cmd(pattern="color(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="color(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     message_id = None
@@ -290,7 +290,7 @@ async def _(event):
         await parse_error(event, f"__Give proper command:__ \n`{hl}color <color_code>` \n__Example:__ `{hl}color #ff0000`", False)
 
 
-@cat_cmd(pattern="xkcd(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="xkcd(?:\s|$)([\s\S]*)")
 async def _(event):
     hellevent = await eor(event, "`processiong...`")
     input_str = event.pattern_match.group(1)
@@ -334,7 +334,7 @@ Year: {}""".format(
         await eod(hellevent, "xkcd n.{} not found!".format(xkcd_id))
 
 
-@cat_cmd(pattern="dns(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="dns(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     sample_url = "https://da.gd/dns/{}".format(input_str)
@@ -355,7 +355,7 @@ async def _(event):
         )
 
 
-@cat_cmd(pattern="url(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="url(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     sample_url = "https://da.gd/s?url={}".format(input_str)
@@ -370,7 +370,7 @@ async def _(event):
         await eod(event, "something is wrong. please try again later.")
 
 
-@cat_cmd(pattern="unshort(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="unshort(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     if not input_str.startswith("http"):

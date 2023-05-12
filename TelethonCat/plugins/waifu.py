@@ -9,7 +9,7 @@ nsfw_list = ["waifu", "neko", "trap", "blowjob", "random"]
 sfw_list = ['waifu', 'neko', 'shinobu', 'megumin', 'bully', 'cuddle', 'cry', 'hug', 'awoo', 'kiss', 'lick', 'pat', 'smug', 'bonk', 'yeet', 'blush', 'smile', 'wave', 'highfive', 'handhold', 'nom', 'bite', 'glomp', 'slap', 'kill', 'kick', 'happy', 'wink', 'poke', 'dance', 'cringe', 'random']
 
 
-@cat_cmd(pattern="nsfw(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="nsfw(?:\s|$)([\s\S]*)")
 async def nsfw(event):
     x = await event.get_chat()
     y = x.id
@@ -47,7 +47,7 @@ async def nsfw(event):
     await event.delete()
 
 
-@cat_cmd(pattern="sfw(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="sfw(?:\s|$)([\s\S]*)")
 async def sfw(event):
     x = await event.get_chat()
     y = x.id
@@ -83,7 +83,7 @@ async def sfw(event):
     await event.delete()
 
 
-@cat_cmd(pattern="nekos(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="nekos(?:\s|$)([\s\S]*)")
 async def _(event):
     x = await event.get_chat()
     y = x.id

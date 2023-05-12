@@ -5,7 +5,7 @@ from pathlib import Path
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="cmds$")
+@dcat_cmd(pattern="cmds$")
 async def kk(event):
     event.message.id
     if event.reply_to_msg_id:
@@ -33,7 +33,7 @@ async def kk(event):
     await eor(event, f"[All available plugins in Hêllẞø†]({hell})", link_preview=False)
 
 
-@cat_cmd(pattern="send ([\s\S]*)")
+@dcat_cmd(pattern="send ([\s\S]*)")
 async def send(event):
     cids = await client_id(event)
     ForGo10God, HELL_USER, hell_mention = cids[0], cids[1], cids[2]
@@ -57,7 +57,7 @@ async def send(event):
         await parse_error(event, f"No plugin named {input_str.lower()}")
 
 
-@cat_cmd(pattern="install(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="install(?:\s|$)([\s\S]*)")
 async def install(event):
     cids = await client_id(event)
     ForGo10God, HELL_USER, hell_mention = cids[0], cids[1], cids[2]
@@ -118,7 +118,7 @@ async def install(event):
             return os.remove(downloaded_file_name)
 
 
-@cat_cmd(pattern="uninstall ([\s\S]*)")
+@dcat_cmd(pattern="uninstall ([\s\S]*)")
 async def uninstall(event):
     shortname = event.text[11:]
     if ".py" in shortname:
@@ -133,7 +133,7 @@ async def uninstall(event):
         await parse_error(hell, f"`{dir_path}` : __{e.strerror}__", False)
 
 
-@cat_cmd(pattern="unload ([\s\S]*)")
+@dcat_cmd(pattern="unload ([\s\S]*)")
 async def unload(event):
     shortname = event.pattern_match["shortname"]
     try:
@@ -143,7 +143,7 @@ async def unload(event):
         await parse_error(event, e)
 
 
-@cat_cmd(pattern="load ([\s\S]*)")
+@dcat_cmd(pattern="load ([\s\S]*)")
 async def load(event):
     shortname = event.pattern_match["shortname"]
     try:

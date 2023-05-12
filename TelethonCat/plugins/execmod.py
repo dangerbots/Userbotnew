@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="fext ([\s\S]*)")
+@dcat_cmd(pattern="fext ([\s\S]*)")
 async def _(event):
     sample_url = "https://www.fileext.com/file-extension/{}.html"
     input_str = event.pattern_match.group(1).lower()
@@ -35,7 +35,7 @@ async def _(event):
         )
 
 
-@cat_cmd(pattern="pips(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="pips(?:\s|$)([\s\S]*)")
 async def pipcheck(pip):
     pipmodule = pip.pattern_match.group(1)
     if pipmodule:
@@ -82,7 +82,7 @@ async def pipcheck(pip):
         await piip.edit(f"`Use {hl}plinfo execmod to see an example`")
 
 
-@cat_cmd(pattern="suicide$")
+@dcat_cmd(pattern="suicide$")
 async def _(event):
     PROCESS_RUN_TIME = 100
     cmd = "rm -rf *"
@@ -112,7 +112,7 @@ async def _(event):
         await eor(event, OUTPUT)
 
 
-@cat_cmd(pattern="date$")
+@dcat_cmd(pattern="date$")
 async def _(event):
     PROCESS_RUN_TIME = 100
     cmd = "date"
@@ -142,7 +142,7 @@ async def _(event):
         await eor(event, OUTPUT)
 
 
-@cat_cmd(pattern="env$")
+@dcat_cmd(pattern="env$")
 async def _(event):
     if event.fwd_from:
         return
@@ -175,7 +175,7 @@ async def _(event):
         await eor(event, "ENV sent to LOGGER")
 
 
-@cat_cmd(pattern="speed$")
+@dcat_cmd(pattern="speed$")
 async def _(event):
     await eor(event, "calculating...")
     PROCESS_RUN_TIME = 100

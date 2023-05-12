@@ -8,7 +8,7 @@ from TelethonCat.DB.gvar_sql import addgvar, gvarstat
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="clone(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="clone(?:\s|$)([\s\S]*)")
 async def _(event):
     reply_message = await event.get_reply_message()
     replied_user, error_i_a = await get_full_user(event)
@@ -48,7 +48,7 @@ async def _(event):
     )
 
 
-@cat_cmd(pattern="revert$")
+@dcat_cmd(pattern="revert$")
 async def _(event):
     name = gvarstat("YOUR_NAME") or "『 Ӈєℓℓ 』"
     bio = gvarstat("BIO_MSG") or choice(bio_msgs)

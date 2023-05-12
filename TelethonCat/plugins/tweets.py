@@ -3,7 +3,7 @@ import os
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="mytweet(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="mytweet(?:\s|$)([\s\S]*)")
 async def tweet(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -27,7 +27,7 @@ async def tweet(event):
         await unsave_stcr(event, owo)
 
 
-@cat_cmd(pattern="trump(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="trump(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -45,7 +45,7 @@ async def nekobot(event):
     os.remove(tweet)
 
 
-@cat_cmd(pattern="modi(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="modi(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -63,7 +63,7 @@ async def nekobot(event):
     os.remove(tweet)
 
 
-@cat_cmd(pattern="mia(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="mia(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -81,7 +81,7 @@ async def nekobot(event):
     os.remove(tweet)
 
 
-@cat_cmd(pattern="dani(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="dani(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -99,7 +99,7 @@ async def nekobot(event):
     os.remove(tweet)
 
 
-@cat_cmd(pattern="pappu(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="pappu(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -117,7 +117,7 @@ async def nekobot(event):
     os.remove(tweet)
 
 
-@cat_cmd(pattern="sunny(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="sunny(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -135,7 +135,7 @@ async def nekobot(event):
     os.remove(tweet)
 
 
-@cat_cmd(pattern="johhny(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="johhny(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -153,7 +153,7 @@ async def nekobot(event):
     os.remove(tweet)
 
 
-@cat_cmd(pattern="gandhi(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="gandhi(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -171,7 +171,7 @@ async def nekobot(event):
     os.remove(tweet)
 
 
-@cat_cmd(pattern="tweet(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="tweet(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -194,7 +194,7 @@ async def nekobot(event):
     os.remove(tweet)
 
 
-@cat_cmd(pattern="cmm(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="cmm(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -212,7 +212,7 @@ async def nekobot(event):
     os.remove(mind)
 
 
-@cat_cmd(pattern="kanna(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="kanna(?:\s|$)([\s\S]*)")
 async def nekobot(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()

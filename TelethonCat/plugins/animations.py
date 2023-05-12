@@ -5,7 +5,7 @@ from telethon.errors import MessageIdInvalidError
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="boxs$")
+@dcat_cmd(pattern="boxs$")
 async def _(event):
     event = await eor(event, "`boxs...`")
     deq = deque(list("🟥🟧🟨🟩🟦🟪🟫⬛⬜"))
@@ -15,7 +15,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@cat_cmd(pattern="rain$")
+@dcat_cmd(pattern="rain$")
 async def _(event):
     event = await eor(event, "`Raining.......`")
     deq = deque(list("🌬☁️🌩🌨🌧🌦🌥⛅🌤"))
@@ -25,7 +25,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@cat_cmd(pattern="deploy$")
+@dcat_cmd(pattern="deploy$")
 async def _(event):
     cid = await client_id(event)
     hell_mention = cid[2]
@@ -51,7 +51,7 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@cat_cmd(pattern="dump$")
+@dcat_cmd(pattern="dump$")
 async def _(message):
     try:
         obj = message.pattern_match.group(1)
@@ -91,7 +91,7 @@ async def _(message):
                 return
 
 
-@cat_cmd(pattern="fleaveme$")
+@dcat_cmd(pattern="fleaveme$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(10)
@@ -114,7 +114,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@cat_cmd(pattern="loveu$")
+@dcat_cmd(pattern="loveu$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(70)
@@ -161,7 +161,7 @@ async def _(event):
         await event.edit(animation_chars[i % 35])
 
 
-@cat_cmd(pattern="plane$")
+@dcat_cmd(pattern="plane$")
 async def _(event):
     event = await eor(event, "Wait for plane...")
     await event.edit("✈-------------")
@@ -181,7 +181,7 @@ async def _(event):
     await asyncio.sleep(3)
 
 
-@cat_cmd(pattern="police$")
+@dcat_cmd(pattern="police$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(12)
@@ -204,7 +204,7 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@cat_cmd(pattern=f"wahack$")
+@dcat_cmd(pattern=f"wahack$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(15)
@@ -231,7 +231,7 @@ async def _(event):
         await event.edit(animation_chars[i % 15])
 
 
-@cat_cmd(pattern="jio$")
+@dcat_cmd(pattern="jio$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(19)
@@ -262,7 +262,7 @@ async def _(event):
         await event.edit(animation_chars[i % 19])
 
 
-@cat_cmd(pattern="solarsystem$")
+@dcat_cmd(pattern="solarsystem$")
 async def _(event):
     animation_interval = 0.1
     animation_ttl = range(80)
@@ -282,7 +282,7 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
 
 
-@cat_cmd(pattern="degi$")
+@dcat_cmd(pattern="degi$")
 async def _(event):
     event = await eor(event, "degi")
     await event.edit("WO")
@@ -304,7 +304,7 @@ async def _(event):
     await event.edit("Wo DeGi TuM eKbAr MaNg KaR tOh DeKhO😄")
 
 
-@cat_cmd(pattern="nehi$")
+@dcat_cmd(pattern="nehi$")
 async def _(event):
     event = await eor(event, "nehi")
     await event.edit(
@@ -313,7 +313,7 @@ async def _(event):
     await asyncio.sleep(999)
 
 
-@cat_cmd(pattern="hnd ([\s\S]*)")
+@dcat_cmd(pattern="hnd ([\s\S]*)")
 async def _(event):
     name = event.pattern_match.group(1)
     animation_interval = 0.5
@@ -332,7 +332,7 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@cat_cmd(pattern="phub$")
+@dcat_cmd(pattern="phub$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 101)
@@ -352,7 +352,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@cat_cmd(pattern="amore$")
+@dcat_cmd(pattern="amore$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 101)
@@ -371,7 +371,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@cat_cmd(pattern="sexy$")
+@dcat_cmd(pattern="sexy$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 101)
@@ -389,7 +389,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@cat_cmd(pattern="istar$")
+@dcat_cmd(pattern="istar$")
 async def ammastar(hellstar):
     animation_interval = 2
     animation_ttl = range(0, 11)
@@ -406,7 +406,7 @@ async def ammastar(hellstar):
         await hellstar.edit(animation_chars[i % 11])
 
 
-@cat_cmd(pattern="lmoon$")
+@dcat_cmd(pattern="lmoon$")
 async def test(event):
     await eor(
         event,
@@ -414,7 +414,7 @@ async def test(event):
     )
 
 
-@cat_cmd(pattern="city$")
+@dcat_cmd(pattern="city$")
 async def test(event):
     await eor(
         event,
@@ -430,12 +430,12 @@ async def test(event):
     )
 
 
-@cat_cmd(pattern="hii$")
+@dcat_cmd(pattern="hii$")
 async def hi(event):
     await eor(event, "🌺✨✨🌺✨🌺🌺🌺\n🌺✨✨🌺✨✨🌺✨\n🌺🌺🌺🌺✨✨🌺✨\n🌺✨✨🌺✨✨🌺✨\n🌺✨✨🌺✨🌺🌺🌺\n☁☁☁☁☁☁☁☁")
 
 
-@cat_cmd(pattern="cheer$")
+@dcat_cmd(pattern="cheer$")
 async def cheer(event):
     await eor(
         event,
@@ -443,12 +443,12 @@ async def cheer(event):
     )
 
 
-@cat_cmd(pattern="getwell$")
+@dcat_cmd(pattern="getwell$")
 async def getwell(event):
     await eor(event, "🌹🌹🌹🌹🌹🌹🌹🌹 \n🌹😷😢😓😷😢💨🌹\n🌹💝💉🍵💊💐💝🌹\n🌹 GetBetter Soon! 🌹\n🌹🌹🌹🌹🌹🌹🌹🌹")
 
 
-@cat_cmd(pattern="switch$")
+@dcat_cmd(pattern="switch$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 11)
@@ -471,7 +471,7 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@cat_cmd(pattern="sprinkle$")
+@dcat_cmd(pattern="sprinkle$")
 async def sprinkle(event):
     await eor(
         event,
@@ -479,7 +479,7 @@ async def sprinkle(event):
     )
 
 
-@cat_cmd(pattern="kiler(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="kiler(?:\s|$)([\s\S]*)")
 async def _(event):
     name = event.pattern_match.group(1)
     xyz = await client_id(event)
@@ -504,7 +504,7 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
 
 
-@cat_cmd(pattern="eye$")
+@dcat_cmd(pattern="eye$")
 async def _(event):
     animation_interval = 3
     animation_ttl = range(10)
@@ -528,7 +528,7 @@ async def _(event):
     await event.delete()
 
 
-@cat_cmd(pattern="thinking$")
+@dcat_cmd(pattern="thinking$")
 async def _(event):
     animation_interval = 0.01
     animation_ttl = range(288)
@@ -576,7 +576,7 @@ async def _(event):
         await event.edit(animation_chars[i % 36])
 
 
-@cat_cmd(pattern="snake$")
+@dcat_cmd(pattern="snake$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(27)
@@ -615,7 +615,7 @@ async def _(event):
         await event.edit(animation_chars[i % 27])
 
 
-@cat_cmd(pattern="human$")
+@dcat_cmd(pattern="human$")
 async def _(event):
     animation_ttl = range(16)
     event = await eor(event, "human...")
@@ -642,7 +642,7 @@ async def _(event):
         await event.edit(animation_chars[i % 16])
 
 
-@cat_cmd(pattern="mc$")
+@dcat_cmd(pattern="mc$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(28)
@@ -682,7 +682,7 @@ async def _(event):
         await event.edit(animation_chars[i % 28])
 
 
-@cat_cmd(pattern="virus$")
+@dcat_cmd(pattern="virus$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(30)
@@ -724,7 +724,7 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
 
-@cat_cmd(pattern="repe$")
+@dcat_cmd(pattern="repe$")
 async def _(event):
     animation_interval = 0.2
     animation_ttl = range(30)
@@ -766,7 +766,7 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
 
-@cat_cmd(pattern="nikal$")
+@dcat_cmd(pattern="nikal$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(6)
@@ -784,7 +784,7 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@cat_cmd(pattern="music$")
+@dcat_cmd(pattern="music$")
 async def _(event):
     animation_interval = 1.5
     animation_ttl = range(11)
@@ -807,7 +807,7 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@cat_cmd(pattern="squ$")
+@dcat_cmd(pattern="squ$")
 async def _(event):
     event = await eor(event, "╔═══════════════════╗ \n  \n╚═══════════════════╝")
     await asyncio.sleep(1)
@@ -853,7 +853,7 @@ async def _(event):
     await asyncio.sleep(6)
 
 
-@cat_cmd(pattern="padmin ([\s\S]*)")
+@dcat_cmd(pattern="padmin ([\s\S]*)")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(0, 20)
@@ -887,7 +887,7 @@ async def _(event):
         await event.edit(animation_chars[i % 20])
 
 
-@cat_cmd(pattern="hack$")
+@dcat_cmd(pattern="hack$")
 async def _(event):
     xyz = await client_id(event)
     hell_mention = xyz[2]

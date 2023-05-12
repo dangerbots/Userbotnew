@@ -52,7 +52,7 @@ because he reached the defined flood limit.""".format(
         )
 
 
-@cat_cmd(pattern="setflood(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="setflood(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     event = await eor(event, "updating flood settings!")

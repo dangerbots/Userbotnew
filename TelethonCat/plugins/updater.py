@@ -90,7 +90,7 @@ async def update(event, repo, ups_rem, ac_br):
     return
 
 
-@cat_cmd(pattern="update(| now)$")
+@dcat_cmd(pattern="update(| now)$")
 async def upstream(event):
     lists = event.text.split(" ", 1)
     conf = None
@@ -197,7 +197,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
     return
 
 
-@cat_cmd(pattern="update build$")
+@dcat_cmd(pattern="update build$")
 async def upstream(event):
     hell = await eor(event, "`Hard-Update In Progress... \nPlease wait until docker build is finished...`")
     off_repo = UPSTREAM_REPO_URL

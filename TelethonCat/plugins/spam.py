@@ -61,7 +61,7 @@ async def spam(event, msg, count, reply_to, delay, bspam, uspam, media):
     )
 
 
-@cat_cmd(pattern="spam(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="spam(?:\s|$)([\s\S]*)")
 async def spammer(event):
     reply_to = await event.get_reply_message()
     lists = event.text.split(" ", 2)
@@ -83,7 +83,7 @@ async def spammer(event):
     await spam(event, msg, count, reply_to, None, None, None, None)
 
 
-@cat_cmd(pattern="dspam(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="dspam(?:\s|$)([\s\S]*)")
 async def dspam(event):
     reply_to = await event.get_reply_message()
     lists = event.text.split(" ", 3)
@@ -113,7 +113,7 @@ async def dspam(event):
     await spam(event, msg, count, reply_to, delay, None, None, None)
 
 
-@cat_cmd(pattern="uspam(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="uspam(?:\s|$)([\s\S]*)")
 async def uspam(event):
     reply_to = await event.get_reply_message()
     lists = event.text.split(" ", 1)
@@ -128,7 +128,7 @@ async def uspam(event):
     await spam(event, msg, 0, reply_to, None, None, True, None)
 
 
-@cat_cmd(pattern="bspam(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="bspam(?:\s|$)([\s\S]*)")
 async def bspam(event):
     reply_to = await event.get_reply_message()
     lists = event.text.split(" ", 2)
@@ -150,7 +150,7 @@ async def bspam(event):
     await spam(event, msg, count, reply_to, None, True, None, None)
 
 
-@cat_cmd(pattern="mspam(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="mspam(?:\s|$)([\s\S]*)")
 async def mspam(event):
     reply_to = await event.get_reply_message()
     lists = event.text.split(" ", 2)
@@ -166,7 +166,7 @@ async def mspam(event):
     await spam(event, None, count, reply_to, None, None, None, media)
 
 
-@cat_cmd(pattern="endspam$")
+@dcat_cmd(pattern="endspam$")
 async def spamend(event):
     if Spam.spam == True:
         Spam.spam = False

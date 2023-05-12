@@ -10,7 +10,7 @@ from telethon.tl.functions.messages import SendMediaRequest
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="stog(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="stog(?:\s|$)([\s\S]*)")
 async def _(event):
     if not event.reply_to_msg_id:
         return await parse_error(event, "Reply to animated sticker to make gif.")
@@ -33,7 +33,7 @@ async def _(event):
         await parse_error(hell, "Only animated stickers are supported.")
 
 
-@cat_cmd(pattern="stoi$")
+@dcat_cmd(pattern="stoi$")
 async def _(hell):
     reply_to_id = hell.message.id
     if hell.reply_to_msg_id:
@@ -65,7 +65,7 @@ async def _(hell):
         await eod(event, f"Syntax : `{hl}stoi` reply to a Telegram normal sticker")
 
 
-@cat_cmd(pattern="itos$")
+@dcat_cmd(pattern="itos$")
 async def _(hell):
     reply_to_id = hell.message.id
     if hell.reply_to_msg_id:
@@ -97,7 +97,7 @@ async def _(hell):
         await eod(event, f"Syntax : `{hl}itos` reply to a Telegram normal sticker")
 
 
-@cat_cmd(pattern="ttf(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="ttf(?:\s|$)([\s\S]*)")
 async def get(event):
     name = event.text[5:]
     if name is None:
@@ -114,7 +114,7 @@ async def get(event):
         await eod(event, f"Reply to text message as `{hl}ttf <file name>`")
 
 
-@cat_cmd(pattern="ftoi$")
+@dcat_cmd(pattern="ftoi$")
 async def on_file_to_photo(event):
     target = await event.get_reply_message()
     hbot = await eor(event, "Converting.....")
@@ -147,7 +147,7 @@ async def on_file_to_photo(event):
     await hbot.delete()
 
 
-@cat_cmd(pattern="itof$")
+@dcat_cmd(pattern="itof$")
 async def _(hell):
     reply_to_id = hell.message.id
     if hell.reply_to_msg_id:
@@ -179,7 +179,7 @@ async def _(hell):
         await eod(event, f"Syntax : `{hl}itof` reply to a sticker/image")
 
 
-@cat_cmd(pattern="nfc(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="nfc(?:\s|$)([\s\S]*)")
 async def _(event):
     if not event.reply_to_msg_id:
         return await parse_error(event, "Reply to any media file.")

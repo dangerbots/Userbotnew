@@ -4,7 +4,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="newfed(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="newfed(?:\s|$)([\s\S]*)")
 async def _(event):
     hell_input = event.pattern_match.group(1)
     chat = "@MissRose_Bot"
@@ -26,7 +26,7 @@ async def _(event):
         await event.client.delete_messages(conv.chat_id, [first.id, response.id])
 
 
-@cat_cmd(pattern="renamefed(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="renamefed(?:\s|$)([\s\S]*)")
 async def _(event):
     hell_input = event.pattern_match.group(1)
     chat = "@MissRose_Bot"
@@ -43,7 +43,7 @@ async def _(event):
             return
 
 
-@cat_cmd(pattern="fstat(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="fstat(?:\s|$)([\s\S]*)")
 async def _(event):
     hell = await eor(event, "`Collecting fstat....`")
     chat = "@MissRose_bot"
@@ -68,7 +68,7 @@ async def _(event):
                 await parse_error(hell, "__Unblock @MissRose_Bot and try again.__", False)
 
 
-@cat_cmd(pattern="fedinfo(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="fedinfo(?:\s|$)([\s\S]*)")
 async def _(event):
     hell = await eor(event, "`Fetching fed info.... please wait`")
     chat = "@MissRose_bot"

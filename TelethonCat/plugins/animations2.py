@@ -5,7 +5,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="indflag$")
+@dcat_cmd(pattern="indflag$")
 async def _(event):
     animation_interval = 0.1
     animation_ttl = range(0, 36)
@@ -19,7 +19,7 @@ async def _(event):
         await event.edit(animation_chars[i % 18])
 
 
-@cat_cmd(pattern="yo$")
+@dcat_cmd(pattern="yo$")
 async def Ooo(e):
     t = "yo"
     for j in range(15):
@@ -27,7 +27,7 @@ async def Ooo(e):
         await e.edit(t)
 
 
-@cat_cmd(pattern="stupid$")
+@dcat_cmd(pattern="stupid$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(14)
@@ -53,7 +53,7 @@ async def _(event):
         await event.edit(animation_chars[i % 14])
 
 
-@cat_cmd(pattern="evil$")
+@dcat_cmd(pattern="evil$")
 async def _(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("😒You Know I'm a good **PERSON**😏")
@@ -71,7 +71,7 @@ async def _(event):
         )
 
 
-@cat_cmd(pattern="gnt$")
+@dcat_cmd(pattern="gnt$")
 async def gn(event):
     await eor(
         event,
@@ -79,7 +79,7 @@ async def gn(event):
     )
 
 
-@cat_cmd(pattern="gmg$")
+@dcat_cmd(pattern="gmg$")
 async def gm(event):
     await eor(
         event,
@@ -87,7 +87,7 @@ async def gm(event):
     )
 
 
-@cat_cmd(pattern="bombs$")
+@dcat_cmd(pattern="bombs$")
 async def _(event):
     event = await eor(event, "bombs")
     await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n")
@@ -115,7 +115,7 @@ async def _(event):
     await asyncio.sleep(2)
 
 
-@cat_cmd(pattern="call$")
+@dcat_cmd(pattern="call$")
 async def _(event):
     xyz = await client_id(event)
     hell_mention = xyz[2]
@@ -144,7 +144,7 @@ async def _(event):
         await event.edit(animation_chars[i % 18])
 
 
-@cat_cmd(pattern="kill$")
+@dcat_cmd(pattern="kill$")
 async def _(event):
     animation_interval = 2
     animation_ttl = range(0, 11)
@@ -178,7 +178,7 @@ async def _(event):
         await event.edit("No User is Defined\nAre u dumb\n\nreply to a user.")
 
 
-@cat_cmd(pattern="wtf$")
+@dcat_cmd(pattern="wtf$")
 async def _(event):
     animation_interval = 0.8
     animation_ttl = range(5)
@@ -195,7 +195,7 @@ async def _(event):
         await event.edit(animation_chars[i % 5], link_preview=True)
 
 
-@cat_cmd(pattern="ding$")
+@dcat_cmd(pattern="ding$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(30)
@@ -217,7 +217,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@cat_cmd(pattern="hypno$")
+@dcat_cmd(pattern="hypno$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(15)
@@ -244,7 +244,7 @@ async def _(event):
         await event.edit(animation_chars[i % 15])
 
 
-@cat_cmd(pattern="dick$")
+@dcat_cmd(pattern="dick$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(15)
@@ -268,7 +268,7 @@ async def _(event):
         await event.edit(animation_chars[i % 15])
 
 
-@cat_cmd(pattern="candy$")
+@dcat_cmd(pattern="candy$")
 async def _(event):
     event = await eor(event, "candy")
     deq = deque(list("🍦🍧🍩🍪🎂🍰🧁🍫🍬🍭"))
@@ -278,7 +278,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@cat_cmd(pattern="gangasta$")
+@dcat_cmd(pattern="gangasta$")
 async def _(event):
     event = await eor(event, "gangasta")
     await event.edit("EVERyBOdy")
@@ -298,7 +298,7 @@ async def _(event):
     await event.edit("EVERyBOdy iZ GangSTur UNtIL I ArRivE 🔥🔥🔥")
 
 
-@cat_cmd(pattern=f"bigoof$")
+@dcat_cmd(pattern=f"bigoof$")
 async def _(event):
     animation_interval = 0.1
     animation_ttl = range(0, 36)
@@ -321,7 +321,7 @@ async def _(event):
         await event.edit(animation_chars[i % 40])
 
 
-@cat_cmd(pattern="charging$")
+@dcat_cmd(pattern="charging$")
 async def timer_blankx(e):
     e = await eor(e, "charging")
     txt = (
@@ -341,7 +341,7 @@ async def timer_blankx(e):
     )
 
 
-@cat_cmd(pattern="unoob$")
+@dcat_cmd(pattern="unoob$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 9)
@@ -362,7 +362,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@cat_cmd(pattern="menoob$")
+@dcat_cmd(pattern="menoob$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 9)
@@ -383,7 +383,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@cat_cmd(pattern="uproo$")
+@dcat_cmd(pattern="uproo$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 8)
@@ -403,7 +403,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@cat_cmd(pattern="mepro$")
+@dcat_cmd(pattern="mepro$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 8)
@@ -423,7 +423,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@cat_cmd(pattern="thanos$")
+@dcat_cmd(pattern="thanos$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(0, 16)

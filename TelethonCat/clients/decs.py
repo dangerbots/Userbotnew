@@ -8,7 +8,7 @@ from TelethonCat.clients.session import H2, H3, H4, H5, Hell
 from TelethonCat.utils.globals import CMD_LIST, LOAD_PLUG
 
 
-def cat_cmd(
+def dcat_cmd(
     pattern: str = None,
     allow_sudo: bool = True,
     disable_edited: bool = False,

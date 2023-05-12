@@ -2,7 +2,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="history(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="history(?:\s|$)([\s\S]*)")
 async def _(hellevent):
     if not hellevent.reply_to_msg_id:
         await parse_error(hellevent, "No user mentioned!")

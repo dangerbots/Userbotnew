@@ -7,7 +7,7 @@ from requests import get
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="app(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="app(?:\s|$)([\s\S]*)")
 async def apk(event):
     lists = event.text.split(" ", 1)
     if not len(lists) == 2:
@@ -37,7 +37,7 @@ async def apk(event):
         await parse_error(hell, err)
 
 
-@cat_cmd(pattern="magisk$")
+@dcat_cmd(pattern="magisk$")
 async def _(magisk):
     if magisk.fwd_from:
         return
@@ -65,7 +65,7 @@ async def _(magisk):
     await eor(magisk, releases)
 
 
-@cat_cmd(pattern="device(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="device(?:\s|$)([\s\S]*)")
 async def device_info(request):
     textx = await request.get_reply_message()
     codename = request.pattern_match.group(1)
@@ -96,7 +96,7 @@ async def device_info(request):
     await eor(request, reply)
 
 
-@cat_cmd(pattern="codename(?: |)([\S]*)(?: |)([\s\S]*)")
+@dcat_cmd(pattern="codename(?: |)([\S]*)(?: |)([\s\S]*)")
 async def codename_info(request):
     if request.fwd_from:
         return
@@ -141,7 +141,7 @@ async def codename_info(request):
     await eor(request, reply)
 
 
-@cat_cmd(pattern="specs(?: |)([\S]*)(?: |)([\s\S]*)")
+@dcat_cmd(pattern="specs(?: |)([\S]*)(?: |)([\s\S]*)")
 async def devices_specifications(request):
     if request.fwd_from:
         return
@@ -204,7 +204,7 @@ async def devices_specifications(request):
     await eor(request, reply)
 
 
-@cat_cmd(pattern="twrp(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="twrp(?:\s|$)([\s\S]*)")
 async def twrp(request):
     if request.fwd_from:
         return

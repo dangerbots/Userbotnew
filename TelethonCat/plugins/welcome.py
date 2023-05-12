@@ -325,7 +325,7 @@ if H5:
             update_welcome(event.chat_id, current_message.id)
 
 
-@cat_cmd(pattern="savewelcome(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="savewelcome(?:\s|$)([\s\S]*)")
 async def save_welcome(event):
     reply = await event.get_reply_message()
     ForGo10God, _, _ = await client_id(event)
@@ -362,7 +362,7 @@ async def save_welcome(event):
     await eod(event, "Error while setting welcome in this group")
 
 
-@cat_cmd(pattern="cleanwelcome$")
+@dcat_cmd(pattern="cleanwelcome$")
 async def del_welcome(event):
     ForGo10God, _, _ = await client_id(event)
     if gvarstat(f"WELCOME_{ForGo10God}_{str(event.chat_id)[1:]}"):
@@ -375,7 +375,7 @@ async def del_welcome(event):
         await eod(event, "To delete a welcome note you need to save one first.")
 
 
-@cat_cmd(pattern="showwelcome$")
+@dcat_cmd(pattern="showwelcome$")
 async def getwelcome(event):
     ForGo10God, _, _ = await client_id(event)
     if not gvarstat(f"WELCOME_{ForGo10God}_{str(event.chat_id)[1:]}"):
@@ -392,7 +392,7 @@ async def getwelcome(event):
         await event.reply(cws.reply)
 
 
-@cat_cmd(pattern="welcome_note$")
+@dcat_cmd(pattern="welcome_note$")
 async def note(event):
     await eor(event, WELCOME_FORMAT)
 

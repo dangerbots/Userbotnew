@@ -2,7 +2,7 @@ import requests
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="ytube(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="ytube(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     sample_url = (
@@ -22,7 +22,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@cat_cmd(pattern="ddg(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="ddg(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     sample_url = (
@@ -42,7 +42,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@cat_cmd(pattern="altn(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="altn(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     sample_url = "https://da.gd/s?url=https://www.altnews.in/?s={}".format(
@@ -60,7 +60,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@cat_cmd(pattern="lmkp(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="lmkp(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     sample_url = "https://da.gd/s?url=https://indiankanoon.org/search/?formInput={}+sortby%3Amostrecent".format(
@@ -78,7 +78,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@cat_cmd(pattern="gem(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="gem(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     sample_url = "https://da.gd/s?url=https://mkp.gem.gov.in/search?q={}&sort_type=created_at_desc&_xhr=1".format(
@@ -96,7 +96,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@cat_cmd(pattern="rchiv(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="rchiv(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     sample_url = "https://da.gd/s?url=https://web.archive.org/web/*/{}".format(

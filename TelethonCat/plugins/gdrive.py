@@ -1,7 +1,7 @@
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="gdl(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="gdl(?:\s|$)([\s\S]*)")
 async def g_download(event):
     hell = await eor(event, "Accessing gdrive...")
     lists = event.text.split(" ", 2)

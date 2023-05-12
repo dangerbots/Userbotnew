@@ -34,7 +34,7 @@ msg = """{}\n
 # -------------------------------------------------------------------------------
 
 
-@cat_cmd(pattern="alivetemp$")
+@dcat_cmd(pattern="alivetemp$")
 async def set_alive_temp(event):
     hell = await eor(event, "`Fetching template ...`")
     reply = await event.get_reply_message()
@@ -47,7 +47,7 @@ async def set_alive_temp(event):
     await hell.edit(f"`ALIVE_TEMPLATE` __changed to:__ \n\n`{reply.text}`")
 
 
-@cat_cmd(pattern="alive$")
+@dcat_cmd(pattern="alive$")
 async def _(event):
     start = datetime.datetime.now()
     userid, hell_user, hell_mention = await client_id(event, is_html=True)
@@ -86,7 +86,7 @@ async def _(event):
     await hell.delete()
 
 
-@cat_cmd(pattern="hell$")
+@dcat_cmd(pattern="hell$")
 async def hell_a(event):
     userid, _, _ = await client_id(event)
     uptime = await get_time((time.time() - StartTime))

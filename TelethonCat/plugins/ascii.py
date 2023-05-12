@@ -2,7 +2,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="ascii(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="ascii(?:\s|$)([\s\S]*)")
 async def _(event):
     if not event.reply_to_msg_id:
         return await eod(event, "Reply to any user message.😒🤐")
@@ -35,7 +35,7 @@ async def _(event):
     )
 
 
-@cat_cmd(pattern="line(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="line(?:\s|$)([\s\S]*)")
 async def _(event):
     if not event.reply_to_msg_id:
         await eod(event, "Reply to any user message.😒🤐")

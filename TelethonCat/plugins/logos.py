@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="logo([\s\S]*)")
+@dcat_cmd(pattern="logo([\s\S]*)")
 async def logo(event):
     hell = await eor(event, "`Processing.....`")
     _, _, hell_mention = await client_id(event)

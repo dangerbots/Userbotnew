@@ -34,7 +34,7 @@ def ocr_space_url(url, overlay=False, api_key=Config.OCR_API, language="eng"):
     return r.json()
 
 
-@cat_cmd(pattern="ocrlang$")
+@dcat_cmd(pattern="ocrlang$")
 async def get_ocr_languages(event):
     languages = {}
     languages["English"] = "eng"
@@ -65,7 +65,7 @@ async def get_ocr_languages(event):
     await eor(event, str(a))
 
 
-@cat_cmd(pattern="read(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="read(?:\s|$)([\s\S]*)")
 async def parse_ocr_space_api(event):
     if not Config.OCR_API:
         return await parse_error(event, "`OCR_API` is not configured. Get an API: [click here](https://ocr.space/ocrapi/freekey)")

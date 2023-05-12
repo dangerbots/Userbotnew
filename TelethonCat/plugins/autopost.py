@@ -4,7 +4,7 @@ from TelethonCat.DB.gvar_sql import addgvar, delgvar, gvarstat
 from TelethonCat.plugins import *
 
 
-@cat_cmd(pattern="autopost(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="autopost(?:\s|$)([\s\S]*)")
 async def _(event):
     if event.is_private:
         return await parse_error(event, "AutoPost Can Only Be Used For Channels & Groups.")
@@ -38,7 +38,7 @@ async def _(event):
     await hell.edit(f"**📍 Started AutoPosting from** `{hel_}` for `{cli_}`")
 
 
-@cat_cmd(pattern="rmautopost(?:\s|$)([\s\S]*)")
+@dcat_cmd(pattern="rmautopost(?:\s|$)([\s\S]*)")
 async def _(event):
     if event.is_private:
         return await parse_error(event, "AutoPost Can Only Be Used For Channels.")
