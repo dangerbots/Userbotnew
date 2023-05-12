@@ -44,7 +44,7 @@ vcam
 WaifuPicsPython
 
 git+https://github.com/HellBoy-OP/py-googletrans
-git+https://github.com/HellBoy-OP/Telethon
+git+https://github.com/LonamiWebs/Telethon
 git+https://github.com/HellBoy-OP/Wikipedia
 git+https://github.com/HellBoy-OP/yt-dp-fork
 git+https://github.com/HellBoy-OP/yt-search-python
