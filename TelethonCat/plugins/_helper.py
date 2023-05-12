@@ -9,7 +9,7 @@ msg = f"""
 **⚡ legendary of dangercat⚡**
   •        [📑 Repo 📑](https://github.com/dangerbots/dangercat)
   •        [dangerbotsNetwork](https://t.me/dangercat)
-  •  ©️ {hell_channel} ™
+  •  ©️ {dangercat_channel} ™
 """
 
 

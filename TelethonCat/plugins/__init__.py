@@ -2,7 +2,7 @@ from catconfig import Config, db_config, os_config
 from TelethonCat import HEROKU_APP, StartTime
 from TelethonCat.clients.client_list import (client_id, clients_list,
                                              get_user_id)
-from TelethonCat.clients.decs import hell_cmd, hell_handler
+from TelethonCat.clients.decs import cat_cmd, dcat_handler
 from TelethonCat.clients.instaAPI import InstaGram
 from TelethonCat.clients.logger import LOGGER
 from TelethonCat.clients.session import (H2, H3, H4, H5, Hell, HellBot,
@@ -42,14 +42,14 @@ from TelethonCat.utils.startup import *
 from TelethonCat.version import __hellver__, __telever__
 
 cjb = "./catconfig/resources/pics/cjb.jpg"
-hell_logo = "./catconfig/resources/pics/hellbot_logo.jpg"
+cat_logo = "./catconfig/resources/pics/dcatlogo.jpg"
 restlo = "./catconfig/resources/pics/rest.jpeg"
 shhh = "./catconfig/resources/pics/chup_madarchod.jpeg"
 shuru = "./catconfig/resources/pics/shuru.jpg"
 spotify_logo = "./catconfig/resources/pics/spotify.jpg"
 
 
-hell_emoji = Config.EMOJI_IN_HELP
+cat_emoji = Config.EMOJI_IN_HELP
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
 hellbot_version = __hellver__
@@ -57,17 +57,17 @@ telethon_version = __telever__
 abuse_m = "Enabled" if str(Config.ABUSE).lower() in enabled_list else "Disabled"
 is_sudo = "True" if gvar_sql.gvarstat("SUDO_USERS") else "False"
 
-my_channel = Config.MY_CHANNEL or "Its_HellBot"
-my_group = Config.MY_GROUP or "HellBot_Chat"
+my_channel = Config.MY_CHANNEL or "danger_bots"
+my_group = Config.MY_GROUP or "dangerbots"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/its_hellbot"
-grp_link = "https://t.me/HellBot_Chat"
-hell_channel = f"[†hê Hêllẞø†]({chnl_link})"
-hell_grp = f"[Hêllẞø† Group]({grp_link})"
+chnl_link = "https://t.me/danger_bots"
+grp_link = "https://t.me/dangerbots"
+dangercat_channel = f"[𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏]({chnl_link})"
+dangercat_grp = f"[𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 Group]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {count} : To get group members

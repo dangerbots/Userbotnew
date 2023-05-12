@@ -711,7 +711,7 @@ async def do_pm_permit_action(chat_ids, event, client):
 
 
 if str(Config.INSTANT_BLOCK).lower() in enabled_list:
-    @hell_handler(incoming=True)
+    @dcat_handler(incoming=True)
     async def instant(event):
         sender = await event.client.get_entity(event.chat_id)
         ForGo10God, _, _ = await client_id(event)

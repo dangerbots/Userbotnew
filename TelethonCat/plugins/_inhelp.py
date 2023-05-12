@@ -39,16 +39,16 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                Button.inline(f"{hell_emoji} {pair} {hell_emoji}", data=f"Information[{page}]({pair})")
+                Button.inline(f"{cat_emoji} {pair} {cat_emoji}", data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
 
     buttons.append(
         [
-            Button.inline(f"⤟ Back {hell_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"),
+            Button.inline(f"⤟ Back {cat_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"),
             Button.inline(f"• ❌ •", data="close"),
-            Button.inline(f"{hell_emoji} Next ⤠", data=f"page({0 if page == (max_pages - 1) else (page + 1)})"),
+            Button.inline(f"{cat_emoji} Next ⤠", data=f"page({0 if page == (max_pages - 1) else (page + 1)})"),
         ]
     )
 
@@ -327,7 +327,7 @@ if Config.BOT_USERNAME and tbot:
         auth = await clients_list()
         if event.query.user_id in auth:
             veriler = Button.inline(
-                f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen"
+                f"{cat_emoji} Re-Open Menu {cat_emoji}", data="reopen"
             )
             await event.edit(
                 f"**🎭 Closed 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 help menu**\n\n**Bot Of:**  {hell_mention}\n\n        [©️ 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 ™️]({chnl_link})",
@@ -343,7 +343,7 @@ if Config.BOT_USERNAME and tbot:
         _, _, hell_mention = await client_id(event, event.query.user_id)
         omk = f"**• Plugin name ≈** `{plugin}`\n**• Uploaded by ≈** {hell_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏]({chnl_link})** ⚡"
         the_plugin_file = "./TelethonCat/plugins/{}.py".format(plugin.lower())
-        butt = Button.inline(f"{hell_emoji} Main Menu {hell_emoji}", data="reopen")
+        butt = Button.inline(f"{cat_emoji} Main Menu {cat_emoji}", data="reopen")
         if os.path.exists(the_plugin_file):
             await event.edit(
                 file=the_plugin_file,
@@ -394,7 +394,7 @@ if Config.BOT_USERNAME and tbot:
 
         buttons = [buttons[i : i + 2] for i in range(0, len(buttons), 2)]
         buttons.append([Button.inline(f"📎 Send Plugin 📎", data=f"send({commands})")])
-        buttons.append([Button.inline(f"{hell_emoji} Main Menu {hell_emoji}", data=f"page({page})")])
+        buttons.append([Button.inline(f"{cat_emoji} Main Menu {cat_emoji}", data=f"page({page})")])
         if event.query.user_id in auth:
             await event.edit(
                 f"**📗 File:**  `{commands}`\n**🔢 Commands:**  `{len(CMD_HELP_BOT[commands]['commands'])}`",
@@ -445,7 +445,7 @@ if Config.BOT_USERNAME and tbot:
                 result,
                 buttons=[
                     Button.inline(
-                        f"{hell_emoji} Return {hell_emoji}",
+                        f"{cat_emoji} Return {cat_emoji}",
                         data=f"Information[{page}]({cmd})",
                     )
                 ],

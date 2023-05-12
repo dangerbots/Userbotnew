@@ -5,7 +5,7 @@ from TelethonCat.plugins import *
 
 
 if Config.TAG_LOGGER != 0:
-    @hell_handler(func=lambda e: (e.mentioned), incoming=True)
+    @dcat_handler(func=lambda e: (e.mentioned), incoming=True)
     async def all_messages_catcher(event):
         ammoca_message = ""
         __, _, hell_men = await client_id(event)

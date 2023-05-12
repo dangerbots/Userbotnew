@@ -127,7 +127,7 @@ def cat_cmd(
     return decorator
 
 
-def hell_handler(**args):
+def dcat_handler(**args):
 #     args["func"] = lambda e: e.via_bot_id is None
     def decorator(func):
         Hell.add_event_handler(func, events.NewMessage(**args))

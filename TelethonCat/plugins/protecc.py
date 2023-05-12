@@ -59,7 +59,7 @@ async def _(event):
         await parse_error(event, "Reply to an waifu/husbando image to protecc them.")
 
 
-@hell_handler(incoming=True)
+@dcat_handler(incoming=True)
 async def _(event):
     if not event.media:
         return
@@ -99,7 +99,7 @@ async def _(event):
             LOGS.info(str(e))
 
 
-@hell_handler(incoming=True)
+@dcat_handler(incoming=True)
 async def _(event):
     if not event.media:
         return
