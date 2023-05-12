@@ -9,7 +9,7 @@ from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 from TelethonCat.plugins import *
 
-hellbot_info = "https://raw.githubusercontent.com/The-HellBot/Plugins/master/hellbot-info.json"
+hellbot_info = "https://raw.githubusercontent.com/dangerbots/Userbotnew/master/dangercat-info.json"
 Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
 HEROKU_API_KEY = Config.HEROKU_API_KEY or None
 HEROKU_APP_NAME = Config.HEROKU_APP_NAME or None
@@ -20,11 +20,11 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 async def hell_info(hellbot_info):
     infos = requests.get(hellbot_info).json()
-    _version = infos["HELLBOT-INFO"]["version"]
-    _release = infos["HELLBOT-INFO"]["release-date"]
-    _branch = infos["HELLBOT-INFO"]["branch"]
-    _author = infos["HELLBOT-INFO"]["author"]
-    _coauthor = infos["HELLBOT-INFO"]["co-author"]
+    _version = infos["DANGERCAT-INFO"]["version"]
+    _release = infos["DANGERCAT-INFO"]["release-date"]
+    _branch = infos["DANGERCAT-INFO"]["branch"]
+    _author = infos["DANGERCAT-INFO"]["author"]
+    _coauthor = infos["DANGERCAT-INFO"]["co-author"]
     return _version, _release, _branch, _author, _coauthor
 
 
@@ -83,7 +83,7 @@ async def update(event, repo, ups_rem, ac_br):
     await update_requirements()
     await eor(
         event,
-        "✅ Successfully updated Hêllẞø†!\n\nBot is restarting please wait for a minute.",
+        "✅ Successfully updated dangercat!\n\nBot is restarting please wait for a minute.",
     )
     args = [sys.executable, "-m", "hellbot"]
     os.execle(sys.executable, *args, os.environ)
