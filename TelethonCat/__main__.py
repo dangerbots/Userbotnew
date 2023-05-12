@@ -68,12 +68,12 @@ async def start_hellbot():
         C5 = await hells(Config.SESSION_5, H5, "SESSION_5")
         await HellBot.start()
         total = C1 + C2 + C3 + C4 + C5
-        LOGS.info("••• HellBot Startup Completed •••")
+        LOGS.info("••• DANGERCAT Startup Completed •••")
         LOGS.info("••• Starting to load Plugins •••")
         await plug_load("TelethonCat/plugins/*.py")
         await plug_channel(Hell, Config.PLUGIN_CHANNEL)
-        LOGS.info("⚡ Your HellBot Is Now Working ⚡")
-        LOGS.info("Head to @Its_HellBot for Updates. Also join chat group to get help regarding HellBot.")
+        LOGS.info("⚡ Your dangercat Is Now Working ⚡")
+        LOGS.info("Head to @dangerbots for Updates. Also join chat group to get help regarding dangercat.")
         LOGS.info(f"» Total Clients = {str(total)} «")
         await hell_is_on(total)
     except Exception as e:
