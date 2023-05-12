@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="carbon(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="carbon(?:\s|$)([\s\S]*)")
 async def carbon(event):
     hell = await eor(event, "__Making carbon ... 25%__")
     _, _, hell_mention = await client_id(event)
@@ -59,7 +59,7 @@ async def carbon(event):
     await hell.delete()
 
 
-@hell_cmd(pattern="kargb(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="kargb(?:\s|$)([\s\S]*)")
 async def kargb(event):
     hell = await eor(event, "__Making carbon ...  25%__")
     R = random.randint(0, 256)

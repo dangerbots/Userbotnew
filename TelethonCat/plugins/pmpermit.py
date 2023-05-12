@@ -16,7 +16,7 @@ pm4 = PM_PERMIT()
 pm5 = PM_PERMIT()
 
 
-@hell_cmd(pattern="block$")
+@cat_cmd(pattern="block$")
 async def block(event):
     if event.is_private:
         getuser = await event.client(
@@ -45,7 +45,7 @@ async def block(event):
         return await parse_error(event, "Only groups and PMs supported.")
 
 
-@hell_cmd(pattern="unblock$")
+@cat_cmd(pattern="unblock$")
 async def unblock(event):
     if event.is_private:
         getuser = await event.client(
@@ -652,7 +652,7 @@ if str(Config.PM_PERMIT).lower() not in disabled_list:
                 await do_pm_permit_action(event.chat_id, event, pm5)
 
 
-@hell_cmd(pattern="listapproved$")
+@cat_cmd(pattern="listapproved$")
 async def allapproved(event):
     approved_users = pm_sql.get_all_approved()
     APPROVED_PMs = "Current Approved PMs\n"

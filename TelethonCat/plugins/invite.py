@@ -49,7 +49,7 @@ def user_full_name(user):
     return full_name
 
 
-@hell_cmd(pattern="inviteall(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="inviteall(?:\s|$)([\s\S]*)")
 async def get_users(event):
     hel_ = event.text[11:]
     hell = await eor(event, f"__Inviting members from__ {hel_}")
@@ -76,7 +76,7 @@ async def get_users(event):
     )
 
 
-@hell_cmd(pattern="add(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="add(?:\s|$)([\s\S]*)")
 async def _(event):
     if "addsudo" in event.raw_text.lower() or "addblacklist" in event.raw_text.lower():
         return

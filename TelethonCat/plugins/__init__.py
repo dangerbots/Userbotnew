@@ -2,7 +2,7 @@ from catconfig import Config, db_config, os_config
 from TelethonCat import HEROKU_APP, StartTime
 from TelethonCat.clients.client_list import (client_id, clients_list,
                                              get_user_id)
-from TelethonCat.clients.decs import hell_cmd, hell_handler
+from TelethonCat.clients.decs import cat_cmd, hell_handler
 from TelethonCat.clients.instaAPI import InstaGram
 from TelethonCat.clients.logger import LOGGER
 from TelethonCat.clients.session import (H2, H3, H4, H5, Hell, HellBot,
@@ -42,7 +42,7 @@ from TelethonCat.utils.startup import *
 from TelethonCat.version import __hellver__, __telever__
 
 cjb = "./catconfig/resources/pics/cjb.jpg"
-hell_logo = "./catconfig/resources/pics/hellbot_logo.jpg"
+cat_logo = "./catconfig/resources/pics/dcatlogo.jpg"
 restlo = "./catconfig/resources/pics/rest.jpeg"
 shhh = "./catconfig/resources/pics/chup_madarchod.jpeg"
 shuru = "./catconfig/resources/pics/shuru.jpg"
@@ -64,10 +64,10 @@ if "@" in my_channel:
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/its_hellbot"
-grp_link = "https://t.me/HellBot_Chat"
-hell_channel = f"[†hê Hêllẞø†]({chnl_link})"
-hell_grp = f"[Hêllẞø† Group]({grp_link})"
+chnl_link = "https://t.me/danger_bots"
+grp_link = "https://t.me/dangerbots"
+hell_channel = f"[𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏]({chnl_link})"
+hell_grp = f"[𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 Group]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {count} : To get group members

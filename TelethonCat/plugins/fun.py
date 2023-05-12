@@ -6,7 +6,7 @@ from telethon.tl.types import MessageEntityMentionName
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="slap ([\s\S]*)")
+@cat_cmd(pattern="slap ([\s\S]*)")
 async def who(event):
     replied_user = await get_user(event)
     caption = await slap(replied_user, event)
@@ -73,79 +73,79 @@ async def slap(replied_user, event):
     return caption
 
 
-@hell_cmd(pattern=f"randi$")
+@cat_cmd(pattern=f"randi$")
 async def rendi(e):
     txt = random.choice(RENDISTR)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"habuse$")
+@cat_cmd(pattern=f"habuse$")
 async def thenus(e):
     txt = random.choice(THANOS_STRINGS)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"fuk$")
+@cat_cmd(pattern=f"fuk$")
 async def tapatap(e):
     txt = random.choice(FUK_STRINGS)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"chu$")
+@cat_cmd(pattern=f"chu$")
 async def chut(e):
     txt = random.choice(CHU_STRINGS)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"noob$")
+@cat_cmd(pattern=f"noob$")
 async def nub(e):
     txt = random.choice(NOOBSTR)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"run$")
+@cat_cmd(pattern=f"run$")
 async def metoo(e):
     txt = random.choice(RUNSREACTS)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"gali$")
+@cat_cmd(pattern=f"gali$")
 async def metoo(e):
     txt = random.choice(GAALI_STR)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"rape$")
+@cat_cmd(pattern=f"rape$")
 async def metoo(e):
     txt = random.choice(RAPE_STRINGS)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"abuse$")
+@cat_cmd(pattern=f"abuse$")
 async def metoo(e):
     txt = random.choice(ABUSE_STRINGS)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"gey$")
+@cat_cmd(pattern=f"gey$")
 async def metoo(e):
     txt = random.choice(GEY_STRINGS)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"piro$")
+@cat_cmd(pattern=f"piro$")
 async def metoo(e):
     txt = random.choice(PRO_STRINGS)
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"insult$")
+@cat_cmd(pattern=f"insult$")
 async def metoo(e):
     txt = random.choice(INSULT_STRINGS)
     await eor(e, txt)
 
 
-@hell_cmd(
+@cat_cmd(
     pattern=f"hiabuse$",
 )
 async def metoo(e):
@@ -153,13 +153,13 @@ async def metoo(e):
     await eor(e, txt)
 
 
-@hell_cmd(pattern="cry$")
+@cat_cmd(pattern="cry$")
 async def cry(e):
     txt = random.choice(CRI)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="cp(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="cp(?:\s|$)([\s\S]*)")
 async def copypasta(cp_e):
     if not cp_e.text[0].isalpha() and cp_e.text[0] not in ("/", "#", "@", "!"):
         textx = await cp_e.get_reply_message()
@@ -190,7 +190,7 @@ async def copypasta(cp_e):
         await eor(cp_e, reply_text)
 
 
-@hell_cmd(pattern="owo(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="owo(?:\s|$)([\s\S]*)")
 async def faces(owo):
     if not owo.text[0].isalpha() and owo.text[0] not in ("/", "#", "@", "!"):
         textx = await owo.get_reply_message()
@@ -213,12 +213,12 @@ async def faces(owo):
         await eor(owo, reply_text)
 
 
-@hell_cmd(pattern="react$")
+@cat_cmd(pattern="react$")
 async def react_meme(react):
     await eor(react, random.choice(FACEREACTS))
 
 
-@hell_cmd(pattern="clap(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="clap(?:\s|$)([\s\S]*)")
 async def claptext(memereview):
     if not memereview.text[0].isalpha() and memereview.text[0] not in (
         "/",

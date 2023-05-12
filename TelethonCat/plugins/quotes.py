@@ -4,67 +4,67 @@ import requests
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="love$")
+@cat_cmd(pattern="love$")
 async def love(e):
     txt = choice(LOVESTR)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="dhoka$")
+@cat_cmd(pattern="dhoka$")
 async def katgya(e):
     txt = choice(DHOKA)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="metoo$")
+@cat_cmd(pattern="metoo$")
 async def metoo(e):
     txt = choice(METOOSTR)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="gdnoon$")
+@cat_cmd(pattern="gdnoon$")
 async def noon(e):
     txt = choice(GDNOON)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="chase$")
+@cat_cmd(pattern="chase$")
 async def police(e):
     txt = choice(CHASE_STR)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="congo$")
+@cat_cmd(pattern="congo$")
 async def Sahih(e):
     txt = choice(CONGRATULATION)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="qhi$")
+@cat_cmd(pattern="qhi$")
 async def hoi(e):
     txt = choice(HELLOSTR)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="gdbye$")
+@cat_cmd(pattern="gdbye$")
 async def bhago(e):
     txt = choice(BYESTR)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="gdnyt$")
+@cat_cmd(pattern="gdnyt$")
 async def night(e):
     txt = choice(GDNIGHT)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="gdmng$")
+@cat_cmd(pattern="gdmng$")
 async def morning(e):
     txt = choice(GDMORNING)
     await eor(e, txt)
 
 
-@hell_cmd(pattern="quote(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="quote(?:\s|$)([\s\S]*)")
 async def quote_search(event):
     hell = await eor(event, "`Processing...`")
     input_str = event.pattern_match.group(1)

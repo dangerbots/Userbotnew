@@ -7,7 +7,7 @@ from telethon.utils import get_input_location
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="getpic(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="getpic(?:\s|$)([\s\S]*)")
 async def _(event):
     hell = await eor(event, "Getting profile photo..")
     replied_user, error_i_a = await get_full_user(event)
@@ -118,7 +118,7 @@ async def get_full_user(event):
                 return None, e
 
 
-@hell_cmd(pattern="poto(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="poto(?:\s|$)([\s\S]*)")
 async def potocmd(event):
     uid = "".join(event.raw_text.split(maxsplit=1)[1:])
     user = await event.get_reply_message()

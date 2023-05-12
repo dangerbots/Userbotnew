@@ -9,7 +9,7 @@ from pySmartDL import SmartDL
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="download(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="download(?:\s|$)([\s\S]*)")
 async def _(event):
     hell = await eor(event, "Downloader in action ...")
     _, _, hell_mention = await client_id(event)
@@ -87,7 +87,7 @@ async def _(event):
         await eod(hell, f"**WRONG SYNTAX:** \n\n`{hl}download <reply or url>`")
 
 
-@hell_cmd(pattern="getc(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="getc(?:\s|$)([\s\S]*)")
 async def get_media(event):
     dir = "./channel_dl/"
     if not os.path.isdir(dir):
@@ -113,7 +113,7 @@ async def get_media(event):
     await hell.edit("Downloaded " + output + " files.")
 
 
-@hell_cmd(pattern="geta(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="geta(?:\s|$)([\s\S]*)")
 async def get_media(event):
     dir = "./channel_dl/"
     if not os.path.isdir(dir):

@@ -13,7 +13,7 @@ from telethon.tl.types import Channel, Chat, InputPhoto, User
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="offline$")
+@cat_cmd(pattern="offline$")
 async def _(event):
     ForGo10God, HELL_USER, _ = await client_id(event)
     user = await event.client.get_entity(ForGo10God)
@@ -52,7 +52,7 @@ async def _(event):
         await parse_error(hell, e)
 
 
-@hell_cmd(pattern="online$")
+@cat_cmd(pattern="online$")
 async def _(event):
     ForGo10God, HELL_USER, _ = await client_id(event)
     user = await event.client.get_entity(ForGo10God)
@@ -90,7 +90,7 @@ async def _(event):
         await parse_error(hell, e)
 
 
-@hell_cmd(pattern="pbio(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="pbio(?:\s|$)([\s\S]*)")
 async def _(event):
     lists = event.text.split(" ", 1)
     if len(lists) != 2:
@@ -103,7 +103,7 @@ async def _(event):
         await parse_error(event, e)
 
 
-@hell_cmd(pattern="pname(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="pname(?:\s|$)([\s\S]*)")
 async def _(event):
     lists = event.text.split(" ", 1)
     if len(lists) != 2:
@@ -127,7 +127,7 @@ async def _(event):
         await parse_error(event, e)
 
 
-@hell_cmd(pattern="ppic$")
+@cat_cmd(pattern="ppic$")
 async def _(event):
     reply = await event.get_reply_message()
     hell = await eor(event, "Changing profile picture ...")
@@ -153,7 +153,7 @@ async def _(event):
         LOGS.warn(str(e))
 
 
-@hell_cmd(pattern="username(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="username(?:\s|$)([\s\S]*)")
 async def update_username(event):
     lists = event.text.split(" ", 2)
     if len(lists) < 2:
@@ -168,7 +168,7 @@ async def update_username(event):
         await parse_error(event, e)
 
 
-@hell_cmd(pattern="count$")
+@cat_cmd(pattern="count$")
 async def count(event):
     u = 0
     g = 0
@@ -204,7 +204,7 @@ async def count(event):
     await hell.edit(result, parse_mode="HTML")
 
 
-@hell_cmd(pattern="delpfp(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="delpfp(?:\s|$)([\s\S]*)")
 async def remove_profilepic(event):
     group = event.text[8:]
     if group == "all":
@@ -233,7 +233,7 @@ async def remove_profilepic(event):
     )
 
 
-@hell_cmd(pattern="myusernames$")
+@cat_cmd(pattern="myusernames$")
 async def _(event):
     _, _, hell_mention = await client_id(event)
     result = await event.client(GetAdminedPublicChannelsRequest())
@@ -243,7 +243,7 @@ async def _(event):
     await eor(event, output_str)
 
 
-@hell_cmd(pattern="stats$")
+@cat_cmd(pattern="stats$")
 async def stats(event):
     hell = await eor(event, "`Collecting stats...`")
     start_time = time.time()

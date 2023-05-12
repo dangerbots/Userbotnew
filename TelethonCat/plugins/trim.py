@@ -46,7 +46,7 @@ async def trimmer(file, out_dir, start, end=None, file_name=None):
     return None
 
 
-@hell_cmd(pattern="vtrim(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="vtrim(?:\s|$)([\s\S]*)")
 async def video(event):
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -137,7 +137,7 @@ async def video(event):
     os.remove(o)
 
 
-@hell_cmd(pattern="atrim(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="atrim(?:\s|$)([\s\S]*)")
 async def audio(event):
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)

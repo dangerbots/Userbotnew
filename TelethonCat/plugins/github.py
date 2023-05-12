@@ -7,7 +7,7 @@ from TelethonCat.plugins import *
 from github import Github
 
 
-@hell_cmd(pattern="commit(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="commit(?:\s|$)([\s\S]*)")
 async def download(event):
     if Config.GITHUB_ACCESS_TOKEN is None:
         await parse_error(event, "`GITHUB_ACCESS_TOKEN` not configured.", False)
@@ -98,7 +98,7 @@ git_user = """
 **◈ Bio:** __{bio}__
 """
 
-@hell_cmd(pattern="github(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="github(?:\s|$)([\s\S]*)")
 async def _(event):
     username = event.text[8:].strip()
     r = requests.get(f"https://api.github.com/users/{username}")

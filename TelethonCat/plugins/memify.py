@@ -6,7 +6,7 @@ from PIL import Image
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="mms(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="mms(?:\s|$)([\s\S]*)")
 async def _(event):
     _reply = await event.get_reply_message()
     msg = event.pattern_match.group(1)
@@ -49,7 +49,7 @@ async def _(event):
         pass
 
 
-@hell_cmd(pattern="mmf(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="mmf(?:\s|$)([\s\S]*)")
 async def _(event):
     _reply = await event.get_reply_message()
     msg = event.pattern_match.group(1)

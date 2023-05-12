@@ -50,7 +50,7 @@ MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
 UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 
 
-@hell_cmd(pattern="setgpic$")
+@cat_cmd(pattern="setgpic$")
 @errors_handler
 async def set_group_photo(event):
     if not event.is_group:
@@ -92,7 +92,7 @@ async def set_group_photo(event):
             )
 
 
-@hell_cmd(pattern="promote(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="promote(?:\s|$)([\s\S]*)")
 @errors_handler
 async def promote(event):
     if event.fwd_from:
@@ -132,7 +132,7 @@ async def promote(event):
     )
 
 
-@hell_cmd(pattern="demote(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="demote(?:\s|$)([\s\S]*)")
 @errors_handler
 async def demote(event):
     if event.fwd_from:
@@ -179,7 +179,7 @@ async def watcher(event):
             LOGS.info(str(e))
 
 
-@hell_cmd(pattern="mute(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="mute(?:\s|$)([\s\S]*)")
 async def muth(event):
     x = await client_id(event)
     ForGo10God = x[0]
@@ -258,7 +258,7 @@ async def muth(event):
         )
 
 
-@hell_cmd(pattern="unmute(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="unmute(?:\s|$)([\s\S]*)")
 async def nomuth(event):
     x = await client_id(event)
     ForGo10God = x[0]
@@ -333,7 +333,7 @@ async def nomuth(event):
         )
 
 
-@hell_cmd(pattern="ban(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="ban(?:\s|$)([\s\S]*)")
 @errors_handler
 async def ban(event):
     hellevent = await eor(event, "`Banning Nigga...`")
@@ -378,7 +378,7 @@ async def ban(event):
     )
 
 
-@hell_cmd(pattern="unban(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="unban(?:\s|$)([\s\S]*)")
 @errors_handler
 async def nothanos(event):
     if event.fwd_from:
@@ -409,7 +409,7 @@ async def nothanos(event):
         await parse_error(hellevent, "Invalid UserId!! Please Recheck it!!")
 
 
-@hell_cmd(pattern="pin(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="pin(?:\s|$)([\s\S]*)")
 @errors_handler
 async def pin(event):
     chat = await event.get_chat()
@@ -447,7 +447,7 @@ async def pin(event):
         await eod(event, "**📍 Pinned successfully !!**")
 
 
-@hell_cmd(pattern="unpin(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="unpin(?:\s|$)([\s\S]*)")
 async def unpin(event):
     await event.get_chat()
     rply = event.reply_to_msg_id
@@ -491,7 +491,7 @@ async def unpin(event):
         return await parse_error(event, e)
 
 
-@hell_cmd(pattern="kick(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="kick(?:\s|$)([\s\S]*)")
 @errors_handler
 async def kick(event):
     chat = await event.get_chat()
@@ -528,7 +528,7 @@ async def kick(event):
     )
 
 
-@hell_cmd(pattern="zombies(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="zombies(?:\s|$)([\s\S]*)")
 async def rm_deletedacc(event):
     lists = event.text.split(" ", 1)
     action = None
@@ -580,7 +580,7 @@ async def rm_deletedacc(event):
         await hell.edit(del_status)
 
 
-@hell_cmd(pattern="undlt$")
+@cat_cmd(pattern="undlt$")
 async def _(event):
     c = await event.get_chat()
     if c.admin_rights or c.creator:

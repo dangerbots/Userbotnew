@@ -9,7 +9,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="pat ([\s\S]*)")
+@cat_cmd(pattern="pat ([\s\S]*)")
 async def _(event):
     username = event.pattern_match.group(1)
     BASE_URL = "https://headp.at/pats/{}"
@@ -34,7 +34,7 @@ async def _(event):
     remove("pat.jpg")
 
 
-@hell_cmd(pattern="join$")
+@cat_cmd(pattern="join$")
 async def _(event):
     mentions = "`━━━━━┓ \n┓┓┓┓┓┃\n┓┓┓┓┓┃　ヽ○ノ ⇦ Me When You Joined \n┓┓┓┓┓┃.     /　 \n┓┓┓┓┓┃ ノ) \n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃`"
     chat = await event.get_input_chat()
@@ -50,7 +50,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@hell_cmd(pattern="pay$")
+@cat_cmd(pattern="pay$")
 async def _(event):
     mentions = "`█▀▀▀▀▀█░▀▀░░░█░░░░█▀▀▀▀▀█\n█░███░█░█▄░█▀▀░▄▄░█░███░█\n█░▀▀▀░█░▀█▀▀▄▀█▀▀░█░▀▀▀░█\n▀▀▀▀▀▀▀░▀▄▀▄▀▄█▄▀░▀▀▀▀▀▀▀\n█▀█▀▄▄▀░█▄░░░▀▀░▄█░▄▀█▀░▀\n░█▄▀░▄▀▀░░░▄▄▄█░▀▄▄▄▀▄▄▀▄\n░░▀█░▀▀▀▀▀▄█░▄░████ ██▀█▄\n▄▀█░░▄▀█▀█▀░█▄▀░▀█▄██▀░█▄\n░░▀▀▀░▀░█▄▀▀▄▄░▄█▀▀▀█░█▀▀\n█▀▀▀▀▀█░░██▀█░░▄█░▀░█▄░██\n█░███░█░▄▀█▀██▄▄▀▀█▀█▄░▄▄\n█░▀▀▀░█░█░░▀▀▀░█░▀▀▀▀▄█▀░\n▀▀▀▀▀▀▀░▀▀░░▀░▀░░░▀▀░▀▀▀▀`"
     chat = await event.get_input_chat()
@@ -66,7 +66,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@hell_cmd(pattern="climb$")
+@cat_cmd(pattern="climb$")
 async def _(event):
     mentions = "`😏/\n/▌ \n/ \\n████\n╬╬\n╬╬\n╬╬\n╬╬\n╬╬\n╬╬\n╬╬\😦\n╬╬/▌\n╬╬/\`"
     chat = await event.get_input_chat()
@@ -82,7 +82,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@hell_cmd(pattern="aag$")
+@cat_cmd(pattern="aag$")
 async def _(event):
     mentions = "`😲💨  🔥\n/|\     🔥🔥\n/ \   🔥🔥🔥`"
     chat = await event.get_input_chat()
@@ -98,7 +98,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@hell_cmd(pattern="push$")
+@cat_cmd(pattern="push$")
 async def _(event):
     mentions = "`.      😎\n          |\👐\n         / \\\n━━━━━┓ ＼＼ \n┓┓┓┓┓┃\n┓┓┓┓┓┃ ヽ😩ノ\n┓┓┓┓┓┃ 　 /　\n┓┓┓┓┓┃  ノ)　 \n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃`"
     chat = await event.get_input_chat()
@@ -114,7 +114,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@hell_cmd(pattern="work$")
+@cat_cmd(pattern="work$")
 async def _(event):
     mentions = "`📔📚           📚\n📓📚📖  😫  📚📚📓\n📕📚📚  📝  📗💻📘\n📖⁣📖📖📖📖📖📖📖📖`"
     chat = await event.get_input_chat()
@@ -130,7 +130,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@hell_cmd(pattern="suckit$")
+@cat_cmd(pattern="suckit$")
 async def _(event):
     mentions = "`......................................... \n \n𝕔𝕠𝕞𝕖 𝕥𝕠 𝕞𝕖, 𝕞𝕪 𝕔𝕙𝕚𝕝𝕕𝕣𝕖𝕟 \n`` \n. . /. ))) . . . . . . . . . (((ヽ \n/. .ノ￣. . . ___. . .￣ Y .\ \n| . (.\, . . . ( ͡° ͜ʖ ͡°). . . ./.) . ) \nヽ.ヽ..ᯢ._.|﹀|._._ノ₄₂₀ // \n. . .\|. 𓀐𓂸Ｙ. . ࿕. . . / \n. . . .|. \. . ᯪ. . .|. . ᯪ. . ﾉ \n. . . . . \ .トー仝ーイ \n. . . . . . . |. ミ土彡 / \n. . . . . . . )\. . .° . ./( \n. . . . . . /. . .\͎̦ ̷̫ ̴́ ̴̢/̴͖. . \ \n. . . . . /. ⁶⁹ . /̴͝Ѽ̔̕☰̴̈́☰☰☰☰D,̰̱ \n. . . . /. / . . / . . .\. \. . \ \n. . . .((. . . .(. . . . .). . . .)) \n. . . .| . . . .). . . . .(|. . . / \n. . . . |. . . /. . . . /. . . ./ \n. . . . |. . ..| . . . ./. . ./. . ... . . 𓁉𓀏𓀃𓁏`"
     chat = await event.get_input_chat()
@@ -146,7 +146,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@hell_cmd(pattern="ohh$")
+@cat_cmd(pattern="ohh$")
 async def _(event):
     mentions = "`´´´´´████████´´\n´´`´███▒▒▒▒███´´´´´\n´´´███▒●▒▒●▒██´´´\n´´´███▒▒👄▒▒██´´\n´´█████▒▒████´´´´´\n´█████▒▒▒▒███´´\n█████▒▒▒▒▒▒███´´´´\n´´▓▓▓▓▓▓▓▓▓▓▓▓▓▒´´\n´´▒▒▒▒▓▓▓▓▓▓▓▓▓▒´´´´´\n´.▒▒▒´´▓▓▓▓▓▓▓▓▒´´´´´\n´.▒▒´´´´▓▓▓▓▓▓▓▒\n..▒▒.´´´´▓▓▓▓▓▓▓▒\n´▒▒▒▒▒▒▒▒▒▒▒▒\n´´´´´´´´´███████´´´´\n´´´´´´´´████████´´´´´´\n´´´´´´´█████████´´´´´\n´´´´´´██████████´´´\n´´´´´´██████████´´\n´´´´´´´█████████´\n´´´´´´´█████████´\n´´´´´´´´████████´´´\n´´´´´´´´´´´▒▒▒▒▒´´´\n´´´´´´´´´´▒▒▒▒▒´´´\n´´´´´´´´´´▒▒▒▒▒´´´\n´´´´´´´´´´▒▒´▒▒´´´\n´´´´´´´´´▒▒´´▒▒´´´\n´´´´´´´´´´▒▒´´´▒▒´´´\n´´´´´´´´´▒▒´´´▒▒´´´\n´´´´´´´´▒▒´´´´´▒▒´´´\n´´´´´´´´▒▒´´´´´´▒▒´´´\n´´´´´´´´███´´´´███´´´\n´´´´´´´´████´´███´´´\n´´´´´´´´█´´███´´████´´´`"
     chat = await event.get_input_chat()
@@ -162,7 +162,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@hell_cmd(pattern="lovestory$")
+@cat_cmd(pattern="lovestory$")
 async def _(event):
     animation_interval = 3
     animation_ttl = range(0, 103)
@@ -189,7 +189,7 @@ async def _(event):
         await event.edit(animation_chars[i % 103])
 
 
-@hell_cmd(pattern="bf$")
+@cat_cmd(pattern="bf$")
 async def pressf(f):
     args = f.text.split()
     arg = (f.text.split(" ", 1))[1] if len(args) > 1 else None
@@ -211,13 +211,13 @@ async def pressf(f):
         await eor(f"`" + out + "`")
 
 
-@hell_cmd(pattern="session$")
+@cat_cmd(pattern="session$")
 async def _(event):
     mentions = "**telethon.errors.rpcerrorlist.AuthKeyDuplicatedError: The authorization key (session file) was used under two different IP addresses simultaneously, and can no longer be used. Use the same session exclusively, or use different sessions (caused by GetMessagesRequest)**"
     await eor(event, mentions)
 
 
-@hell_cmd(pattern="ftext ([\s\S]*)")
+@cat_cmd(pattern="ftext ([\s\S]*)")
 async def payf(event):
     input_str = event.pattern_match.group(1)
     if input_str:
@@ -242,19 +242,19 @@ async def payf(event):
     await eor(event, pay)
 
 
-@hell_cmd(pattern="cat$")
+@cat_cmd(pattern="cat$")
 async def hmm(hell):
     reactcat = nekos.textcat()
     await eor(hell, reactcat)
 
 
-@hell_cmd(pattern="why$")
+@cat_cmd(pattern="why$")
 async def hmm(hell):
     whyhell = nekos.why()
     await eor(hell, whyhell)
 
 
-@hell_cmd(pattern="fact$")
+@cat_cmd(pattern="fact$")
 async def hmm(hell):
     facthell = nekos.fact()
     await eor(hell, facthell)

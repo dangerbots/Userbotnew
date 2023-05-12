@@ -31,7 +31,7 @@ if Config.TAG_LOGGER != 0:
         )
 
 
-@hell_cmd(pattern="tagall(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="tagall(?:\s|$)([\s\S]*)")
 async def _(event):
     mentions = event.text[8:]
     chat = await event.get_input_chat()

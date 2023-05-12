@@ -4,7 +4,7 @@ from telethon.errors import rpcbaseerrors
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="del$")
+@cat_cmd(pattern="del$")
 @errors_handler
 async def delete(event):
     reply = await event.get_reply_message()
@@ -16,7 +16,7 @@ async def delete(event):
     await event.delete()
 
 
-@hell_cmd(pattern="purge(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="purge(?:\s|$)([\s\S]*)")
 async def fastpurger(event):
     hell = event.text[7:]
     what = hell.split(" ", 1)[0]
@@ -102,7 +102,7 @@ async def fastpurger(event):
         await done.delete()
 
 
-@hell_cmd(pattern="sd(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="sd(?:\s|$)([\s\S]*)")
 @errors_handler
 async def selfdestruct(event):
     message = event.text[4:]

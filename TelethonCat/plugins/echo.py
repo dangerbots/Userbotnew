@@ -8,7 +8,7 @@ from TelethonCat.DB.gvar_sql import addgvar, gvarstat
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="echo$")
+@cat_cmd(pattern="echo$")
 async def echo(event):
     if event.reply_to_msg_id is not None:
         ForGo10God, HELL_USER, hell_mention = await client_id(event)
@@ -25,7 +25,7 @@ async def echo(event):
         await eod(event, "Reply to a User's message to echo his messages")
 
 
-@hell_cmd(pattern="rmecho$")
+@cat_cmd(pattern="rmecho$")
 async def echo(event):
     if event.reply_to_msg_id is not None:
         ForGo10God, HELL_USER, hell_mention = await client_id(event)
@@ -42,7 +42,7 @@ async def echo(event):
         await eod(event, "Reply to a User's message to echo his messages")
 
 
-@hell_cmd(pattern="listecho$")
+@cat_cmd(pattern="listecho$")
 async def echo(event):
     lsts = get_all_echos()
     if len(lsts) > 0:

@@ -13,7 +13,7 @@ qt_bots = ["792028928", "1733263647"]
 hus_bot = ["1964681186"]
 
 
-@hell_cmd(pattern="pt(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="pt(?:\s|$)([\s\S]*)")
 async def _(event):
     BASE_URL = "http://images.google.com"
     if event.reply_to_msg_id:
@@ -139,7 +139,7 @@ async def _(event):
             LOGS.info(str(e))
 
 
-@hell_cmd(pattern="adwaifu(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="adwaifu(?:\s|$)([\s\S]*)")
 async def _(event):
     _, _, hell_mention = await client_id(event)
     if not event.is_group:
@@ -150,7 +150,7 @@ async def _(event):
     await eod(event, f"**✅ Autowaifu Started !!** \n\n__• Chat:__ {event.chat.title} \n__• Chat ID:__ `{event.chat_id}` \n__• Client:__ {hell_mention}")
 
 
-@hell_cmd(pattern="adhusb(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="adhusb(?:\s|$)([\s\S]*)")
 async def _(event):
     _, _, hell_mention = await client_id(event)
     if not event.is_group:
@@ -161,7 +161,7 @@ async def _(event):
     await eod(event, f"**✅ Autohusbando Started !!** \n\n__• Chat:__ {event.chat.title} \n__• Chat ID:__ `{event.chat_id}` \n__• Client:__ {hell_mention}")
 
 
-@hell_cmd(pattern="rmwaifu(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="rmwaifu(?:\s|$)([\s\S]*)")
 async def _(event):
     _, _, hell_mention = await client_id(event)
     if not event.is_group:
@@ -172,7 +172,7 @@ async def _(event):
     await eod(event, f"**🗑️ Removed Autowaifu !!** \n\n__• Chat:__ {event.chat.title} \n__• Chat ID:__ `{event.chat_id}` \n__• Client:__ {hell_mention}")
 
 
-@hell_cmd(pattern="rmhusb(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="rmhusb(?:\s|$)([\s\S]*)")
 async def _(event):
     _, _, hell_mention = await client_id(event)
     if not event.is_group:
@@ -183,7 +183,7 @@ async def _(event):
     await eod(event, f"**🗑️ Removed Autohusbando !!** \n\n__• Chat:__ {event.chat.title} \n__• Chat ID:__ `{event.chat_id}` \n__• Client:__ {hell_mention}")
 
 
-@hell_cmd(pattern="autowaifu$")
+@cat_cmd(pattern="autowaifu$")
 async def _(event):
     hell = await eor(event, "Fetching Autowaifu chats...")
     all_grp = get_all_grp()
@@ -194,7 +194,7 @@ async def _(event):
     await hell.edit(x)
 
 
-@hell_cmd(pattern="autohusbando$")
+@cat_cmd(pattern="autohusbando$")
 async def _(event):
     hell = await eor(event, "Fetching Autohusbando chats...")
     all_grp = get_all_hus_grp()

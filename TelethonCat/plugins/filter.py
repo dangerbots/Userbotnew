@@ -227,7 +227,7 @@ if H5:
                     filter5.last_triggered_filters[_id].remove(name)
 
 
-@hell_cmd(pattern="filter(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="filter(?:\s|$)([\s\S]*)")
 async def on_snip_save(event):
     name = event.pattern_match.group(1)
     msg = await event.get_reply_message()
@@ -267,7 +267,7 @@ async def on_snip_save(event):
         )
 
 
-@hell_cmd(pattern="filters$")
+@cat_cmd(pattern="filters$")
 async def on_snip_list(event):
     ForGo10God, _, _ = await client_id(event)
     _id = event.chat_id
@@ -296,7 +296,7 @@ async def on_snip_list(event):
         await eor(event, OUT_STR)
 
 
-@hell_cmd(pattern="stop(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="stop(?:\s|$)([\s\S]*)")
 async def on_snip_delete(event):
     name = event.pattern_match.group(1)
     ForGo10God, _, hell_mention = await client_id(event)
@@ -313,7 +313,7 @@ async def on_snip_delete(event):
         await parse_error(event, e)
 
 
-@hell_cmd(pattern="rmallfilters$")
+@cat_cmd(pattern="rmallfilters$")
 async def on_all_snip_delete(event):
     ForGo10God, _, _ = await client_id(event)
     _id = event.chat_id

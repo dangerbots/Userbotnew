@@ -13,7 +13,7 @@ from TelethonCat.utils.startup import (join_it, logger_check, start_msg,
 from TelethonCat.version import __hellver__
 
 # Global Variables #
-HELL_PIC = "https://te.legra.ph/file/cb0bd62632a3a2b6b2726.jpg"
+HELL_PIC = "https://te.legra.ph/file/dc725a7811cdd47b649c5.jpg"
 
 
 # Client Starter
@@ -92,4 +92,3 @@ else:
         pass
 
 
-# hellbot

@@ -5,7 +5,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="extdl$")
+@cat_cmd(pattern="extdl$")
 async def install(event):
     chat = Config.PLUGIN_CHANNEL
     if chat == 0:
@@ -36,7 +36,7 @@ async def install(event):
     await hell_.edit(hell)
 
 
-@hell_cmd(pattern="installall ([\s\S]*)")
+@cat_cmd(pattern="installall ([\s\S]*)")
 async def install(event):
     chat = event.pattern_match.group(1)
     hell_ = await eor(event, f"**Starting To Install Plugins From {chat} !!**")

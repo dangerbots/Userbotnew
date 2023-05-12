@@ -14,7 +14,7 @@ HEROKU_API_KEY = Config.HEROKU_API_KEY
 HEROKU_APP_NAME = Config.HEROKU_APP_NAME
 
 
-@hell_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)")
+@cat_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)")
 async def variable(hell):
     if Config.HEROKU_APP_NAME is not None:
         app = Heroku.app(Config.HEROKU_APP_NAME)
@@ -121,7 +121,7 @@ async def variable(hell):
             return await parse_error(event, f"`{variable}` __does not exists__", False)
 
 
-@hell_cmd(pattern="usage$")
+@cat_cmd(pattern="usage$")
 async def dyno_usage(hell):
     event = await eor(hell, "`Processing...`")
     useragent = (
@@ -176,7 +176,7 @@ async def dyno_usage(hell):
     )
 
 
-@hell_cmd(pattern="logs$")
+@cat_cmd(pattern="logs$")
 async def _(event):
     if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
         return await parse_error(event, f"Either `HEROKU_APP_NAME` or `HEROKU_API_KEY` are filled incorrect.", False)

@@ -12,7 +12,7 @@ from TelethonCat.plugins import *
 from vcam import meshGen, vcam
 
 
-@hell_cmd(pattern="feye$")
+@cat_cmd(pattern="feye$")
 async def fun(event):
     path = "omk"
     hell = await eor(event, "Editing In Progress...")
@@ -41,7 +41,7 @@ async def fun(event):
             os.remove(files)
 
 
-@hell_cmd(pattern="warp$")
+@cat_cmd(pattern="warp$")
 async def fun(event):
     path = "omk"
     hell = await eor(event, "Warping In Progress...")
@@ -72,7 +72,7 @@ async def fun(event):
             os.remove(files)
 
 
-@hell_cmd(pattern="distort$")
+@cat_cmd(pattern="distort$")
 async def fun(event):
     path = "omk"
     hell = await eor(event, "Distortion In Progress...")
@@ -103,7 +103,7 @@ async def fun(event):
             os.remove(files)
 
 
-@hell_cmd(pattern="frybot$")
+@cat_cmd(pattern="frybot$")
 async def _(event):
     reply = await event.get_reply_message()
     if not reply:
@@ -125,7 +125,7 @@ async def _(event):
         await hell.delete()
 
 
-@hell_cmd(pattern="fry(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="fry(?:\s|$)([\s\S]*)")
 async def deepfryer(event):
     try:
         frycount = int(event.pattern_match.group(1))

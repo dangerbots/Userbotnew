@@ -3,14 +3,14 @@ import io
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="yaml$")
+@cat_cmd(pattern="yaml$")
 async def _(event):
     msg = await event.message.get_reply_message()
     yaml_text = yaml_format(msg)
     await eor(event, yaml_text, parse_mode=parse_pre)
 
 
-@hell_cmd(pattern="json$")
+@cat_cmd(pattern="json$")
 async def _(event):
     the_real_message = None
     reply_to_id = None

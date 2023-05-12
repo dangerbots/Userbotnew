@@ -7,7 +7,7 @@ from TelethonCat.plugins import *
 logo = "https://te.legra.ph/file/2c546060b20dfd7c1ff2d.jpg"
 
 
-@hell_cmd(pattern="imdb(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="imdb(?:\s|$)([\s\S]*)")
 async def _(event):
     reply = await event.get_reply_message()
     lists = event.text.split(" ", 1)
@@ -119,7 +119,7 @@ async def _(event):
         await parse_error(hell, e)
 
 
-@hell_cmd(pattern="watch(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="watch(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.pattern_match.group(1)
     hell = await eor(event, "Finding Sites...")

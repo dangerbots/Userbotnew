@@ -2,7 +2,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="ss(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="ss(?:\s|$)([\s\S]*)")
 async def _(event):
     if not event.reply_to_msg_id:
         return await parse_error(event, "Reply to a message to quote it.")

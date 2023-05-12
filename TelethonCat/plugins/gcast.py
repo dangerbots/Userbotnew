@@ -1,7 +1,7 @@
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="gcast(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="gcast(?:\s|$)([\s\S]*)")
 async def _(event):
     reply_msg = await event.get_reply_message()
     flag = str(event.text.split(" ", 2)[1])

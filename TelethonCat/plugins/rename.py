@@ -10,7 +10,7 @@ from telethon.tl.types import DocumentAttributeVideo
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="rename(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="rename(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.text[8:]
     if input_str == "":
@@ -43,7 +43,7 @@ async def _(event):
         await eod(hell, f"**Syntax Wrong !!** \n\n• `{hl}rename new file name` as reply to a Telegram file")
 
 
-@hell_cmd(pattern="rnupload(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="rnupload(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.text[10:]
     if input_str == "":
@@ -97,7 +97,7 @@ async def _(event):
         await hell.edit(f"**Syntax Wrong !!** \n\n• `{hl}rnupload new file name` as reply to a telegram file.")
 
 
-@hell_cmd(pattern="rnsupload(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="rnsupload(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.text[11:]
     if input_str == "":

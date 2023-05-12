@@ -3,7 +3,7 @@ import os
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="unpack$")
+@cat_cmd(pattern="unpack$")
 async def _(event):
     hell = await eor(event, "**Unpacking...**")
     reply = await event.get_reply_message()
@@ -23,7 +23,7 @@ async def _(event):
     os.remove(b)
 
 
-@hell_cmd(pattern="pack(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="pack(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.text[6:]
     hell = await eor(event, f"Packing into `{input_str}`")

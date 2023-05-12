@@ -17,7 +17,7 @@ def resize_image(image):
     im.save(image, "PNG")
 
 
-@hell_cmd(pattern="t(m|t)(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="t(m|t)(?:\s|$)([\s\S]*)")
 async def _(event):
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -98,7 +98,7 @@ async def _(event):
         await eod(hell, "Reply to a message to get a permanent telegra.ph link.")
 
 
-@hell_cmd(pattern="tgraph(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="tgraph(?:\s|$)([\s\S]*)")
 async def _(event):
     hell = await eor(event, "Making telegraph post ...")
     reply = await event.get_reply_message()

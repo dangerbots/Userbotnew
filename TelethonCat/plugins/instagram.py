@@ -5,7 +5,7 @@ import requests
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="igdl(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="igdl(?:\s|$)([\s\S]*)")
 async def download(event):
     lists = event.text.split(" ", 3)
     link = None
@@ -91,7 +91,7 @@ async def download(event):
         await parse_error(hell, "Give proper command.")
 
 
-@hell_cmd(pattern="igup(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="igup(?:\s|$)([\s\S]*)")
 async def upload(event):
     flag, url = await get_flag(event)
     hell = await eor(event, "IG uploader in action...")
@@ -192,7 +192,7 @@ async def upload(event):
         await eod(hell, f"Give proper flag. Check `{hl}plinfo instagram` for details.")
     
 
-@hell_cmd(pattern="iguser(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="iguser(?:\s|$)([\s\S]*)")
 async def userinfo(event):
     uname = event.text.split(" ", 2)[1]
     username = uname.replace("@", "") if "@" in uname else uname

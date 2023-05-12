@@ -6,7 +6,7 @@ import time
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="ls(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="ls(?:\s|$)([\s\S]*)")
 async def lst(event):
     input_str = event.pattern_match.group(1)
     if input_str:
@@ -35,7 +35,7 @@ async def lst(event):
         await event.delete()
 
 
-@hell_cmd(pattern="ls_local$")
+@cat_cmd(pattern="ls_local$")
 async def _(event):
     PROCESS_RUN_TIME = 100
     cmd = "ls -lh ./DOWNLOADS/"
@@ -66,7 +66,7 @@ async def _(event):
     await eor(event, f"{OUTPUT}`{stdout.decode()}`")
 
 
-@hell_cmd(pattern="ls_root$")
+@cat_cmd(pattern="ls_root$")
 async def _(event):
     PROCESS_RUN_TIME = 100
     cmd = "ls -lh"
@@ -97,7 +97,7 @@ async def _(event):
     await eor(event, f"{OUTPUT}`{stdout.decode()}`")
 
 
-@hell_cmd(pattern="ls_saved$")
+@cat_cmd(pattern="ls_saved$")
 async def _(event):
     PROCESS_RUN_TIME = 100
     cmd = "ls ./SAVED/"
@@ -128,7 +128,7 @@ async def _(event):
     await eor(event, f"{OUTPUT}`{stdout.decode()}`")
 
 
-@hell_cmd(pattern="rnsaved(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="rnsaved(?:\s|$)([\s\S]*)")
 async def _(event):
     PROCESS_RUN_TIME = 100
     input_str = event.pattern_match.group(1)
@@ -164,7 +164,7 @@ async def _(event):
     await eor(event, f"File renamed `{src}` to `{dst}`")
 
 
-@hell_cmd(pattern="rnlocal(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="rnlocal(?:\s|$)([\s\S]*)")
 async def _(event):
     PROCESS_RUN_TIME = 100
     input_str = event.pattern_match.group(1)
@@ -200,7 +200,7 @@ async def _(event):
     await eor(event, f"File renamed `{src}` to `{dst}`")
 
 
-@hell_cmd(pattern="delsave(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="delsave(?:\s|$)([\s\S]*)")
 async def handler(event):
     input_str = event.pattern_match.group(1)
     pathtofile = f"./SAVED/{input_str}"
@@ -212,7 +212,7 @@ async def handler(event):
         await eod(event, "⛔️File Not Found😬")
 
 
-@hell_cmd(pattern="delocal(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="delocal(?:\s|$)([\s\S]*)")
 async def handler(event):
     input_str = event.pattern_match.group(1)
     pathtofile = f"./DOWNLOADS/{input_str}"

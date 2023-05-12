@@ -12,7 +12,7 @@ from telethon.tl.types import DocumentAttributeVideo
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="zip$")
+@cat_cmd(pattern="zip$")
 async def _(event):
     if not event.is_reply:
         await parse_error(event, "Reply to a file to compress it.")
@@ -44,7 +44,7 @@ async def _(event):
     )
 
 
-@hell_cmd(pattern="tar(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="tar(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     hell = await eor(event, "Processing ...")
@@ -116,7 +116,7 @@ async def create_archive(input_directory):
     return return_name
 
 
-@hell_cmd(pattern="unzip$")
+@cat_cmd(pattern="unzip$")
 async def _(event):
     hell = await eor(event, "Processing ...")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -200,7 +200,7 @@ async def _(event):
         os.remove(downloaded_file_name)
 
 
-@hell_cmd(pattern="untar$")
+@cat_cmd(pattern="untar$")
 async def _(event):
     hell = await eor(event, "Processing ...")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):

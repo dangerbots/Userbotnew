@@ -39,7 +39,7 @@ async def get_full_user(event):
     return user_obj, extra
 
 
-@hell_cmd(pattern="gpro(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="gpro(?:\s|$)([\s\S]*)")
 async def _(event):
     ForGo10God, _, _ = await client_id(event)
     new_rights = ChatAdminRights(
@@ -89,7 +89,7 @@ async def _(event):
     )
 
 
-@hell_cmd(pattern="gdem(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="gdem(?:\s|$)([\s\S]*)")
 async def _(event):
     ForGo10God, _, _ = await client_id(event)
     newrights = ChatAdminRights(
@@ -137,7 +137,7 @@ async def _(event):
     )
 
 
-@hell_cmd(pattern="gban(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="gban(?:\s|$)([\s\S]*)")
 async def _(event):
     reason = ""
     ForGo10God, _, hell_mention = await client_id(event)
@@ -215,7 +215,7 @@ async def _(event):
     )
 
 
-@hell_cmd(pattern="ungban(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="ungban(?:\s|$)([\s\S]*)")
 async def _(event):
     _, _, hell_mention = await client_id(event)
     hell = await eor(event, "`Ungban in action...`")
@@ -251,7 +251,7 @@ async def _(event):
     )
 
 
-@hell_cmd(pattern="listgban$")
+@cat_cmd(pattern="listgban$")
 async def already(event):
     hell = await eor(event, "`Fetching Gbanned users...`")
     gbanned_users = all_gbanned()
@@ -384,7 +384,7 @@ if H5:
                 await event.reply(gban_watcher)
 
 
-@hell_cmd(pattern="gkick(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="gkick(?:\s|$)([\s\S]*)")
 async def gkick(event):
     reason = ""
     ForGo10God, _, hell_mention = await client_id(event)
@@ -447,7 +447,7 @@ async def gkick(event):
     )
 
 
-@hell_cmd(pattern="gmute(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="gmute(?:\s|$)([\s\S]*)")
 async def gm(event):
     ForGo10God, _, hell_mention = await client_id(event)
     hell = await eor(event, "`GMute in action...`")
@@ -484,7 +484,7 @@ async def gm(event):
         await parse_error(hell, e)
 
 
-@hell_cmd(pattern="ungmute(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="ungmute(?:\s|$)([\s\S]*)")
 async def endgmute(event):
     _, _, hell_mention = await client_id(event)
     hell = await eor(event, "`UnGmute in action...`")

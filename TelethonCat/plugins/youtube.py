@@ -8,7 +8,7 @@ from telethon.tl.types import DocumentAttributeAudio
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="yt(a|v)(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="yt(a|v)(?:\s|$)([\s\S]*)")
 async def download_video(event):
     lists = event.text.split(" ", 1)
     if len(lists) != 2:
@@ -87,7 +87,7 @@ async def download_video(event):
             await parse_error(hell, e)
 
 
-@hell_cmd(pattern="ytlink(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="ytlink(?:\s|$)([\s\S]*)")
 async def hmm(event):
     lists = event.text.split(" ", 1)
     if len(lists) != 2:

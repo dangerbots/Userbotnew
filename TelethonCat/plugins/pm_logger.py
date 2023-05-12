@@ -3,7 +3,7 @@ from TelethonCat.DB.pmlogger_sql import (add_nolog, del_nolog, get_all_nolog,
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="save(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="save(?:\s|$)([\s\S]*)")
 async def _(event):
     if f"{hl}savewelcome" in event.text:
         return
@@ -54,7 +54,7 @@ async def _(event):
                     LOGS.info(str(e))
 
 
-@hell_cmd(pattern="elog$")
+@cat_cmd(pattern="elog$")
 async def _(event):
     if Config.PM_LOGGER != 0:
         chat = await event.get_chat()
@@ -70,7 +70,7 @@ async def _(event):
         await parse_error(event, "`PM_LOGGER` is not configured.", False)
 
 
-@hell_cmd(pattern="nlog$")
+@cat_cmd(pattern="nlog$")
 async def _(event):
     if Config.PM_LOGGER != 0:
         chat = await event.get_chat()
@@ -85,7 +85,7 @@ async def _(event):
         await parse_error(event, "`PM_LOGGER` is not configured.", False)
 
 
-@hell_cmd(pattern="allnolog$")
+@cat_cmd(pattern="allnolog$")
 async def _(event):
     text = "**Not logging messages from:**\n"
     all_nolog = get_all_nolog()

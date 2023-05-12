@@ -5,7 +5,7 @@ from pathlib import Path
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="cmds$")
+@cat_cmd(pattern="cmds$")
 async def kk(event):
     event.message.id
     if event.reply_to_msg_id:
@@ -33,12 +33,12 @@ async def kk(event):
     await eor(event, f"[All available plugins in Hêllẞø†]({hell})", link_preview=False)
 
 
-@hell_cmd(pattern="send ([\s\S]*)")
+@cat_cmd(pattern="send ([\s\S]*)")
 async def send(event):
     cids = await client_id(event)
     ForGo10God, HELL_USER, hell_mention = cids[0], cids[1], cids[2]
     message_id = event.reply_to_msg_id or event.message.id
-    thumb = hell_logo
+    thumb = cat_logo
     input_str = event.pattern_match.group(1)
     omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {hell_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt]({chnl_link})** ⚡"
     the_plugin_file = "./TelethonCat/plugins/{}.py".format(input_str.lower())
@@ -57,7 +57,7 @@ async def send(event):
         await parse_error(event, f"No plugin named {input_str.lower()}")
 
 
-@hell_cmd(pattern="install(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="install(?:\s|$)([\s\S]*)")
 async def install(event):
     cids = await client_id(event)
     ForGo10God, HELL_USER, hell_mention = cids[0], cids[1], cids[2]
@@ -118,7 +118,7 @@ async def install(event):
             return os.remove(downloaded_file_name)
 
 
-@hell_cmd(pattern="uninstall ([\s\S]*)")
+@cat_cmd(pattern="uninstall ([\s\S]*)")
 async def uninstall(event):
     shortname = event.text[11:]
     if ".py" in shortname:
@@ -133,7 +133,7 @@ async def uninstall(event):
         await parse_error(hell, f"`{dir_path}` : __{e.strerror}__", False)
 
 
-@hell_cmd(pattern="unload ([\s\S]*)")
+@cat_cmd(pattern="unload ([\s\S]*)")
 async def unload(event):
     shortname = event.pattern_match["shortname"]
     try:
@@ -143,7 +143,7 @@ async def unload(event):
         await parse_error(event, e)
 
 
-@hell_cmd(pattern="load ([\s\S]*)")
+@cat_cmd(pattern="load ([\s\S]*)")
 async def load(event):
     shortname = event.pattern_match["shortname"]
     try:

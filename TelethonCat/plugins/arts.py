@@ -1,7 +1,7 @@
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="carry(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="carry(?:\s|$)([\s\S]*)")
 async def kraken(carry):
     name = carry.pattern_match.group(1)
     await eor(
@@ -10,7 +10,7 @@ async def kraken(carry):
     )
 
 
-@hell_cmd(pattern="ded(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="ded(?:\s|$)([\s\S]*)")
 async def kraken(event):
     _, _, hell_mention = await client_id(event)
     name = event.pattern_match.group(1)
@@ -33,7 +33,7 @@ async def kraken(event):
     )
 
 
-@hell_cmd(pattern="sthink(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="sthink(?:\s|$)([\s\S]*)")
 async def kraken(event):
     _, _, hell_mention = await client_id(event)
     name = event.pattern_match.group(1)
@@ -58,7 +58,7 @@ async def kraken(event):
     await eor(event, B)
 
 
-@hell_cmd(pattern="sfrog(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="sfrog(?:\s|$)([\s\S]*)")
 async def kraken(event):
     _, _, hell_mention = await client_id(event)
     name = event.pattern_match.group(1)
@@ -83,7 +83,7 @@ async def kraken(event):
     await eor(event, C)
 
 
-@hell_cmd(pattern="sdead(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="sdead(?:\s|$)([\s\S]*)")
 async def kraken(event):
     _, _, hell_mention = await client_id(event)
     name = event.pattern_match.group(1)
@@ -108,7 +108,7 @@ async def kraken(event):
     await eor(event, D)
 
 
-@hell_cmd(pattern="strump(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="strump(?:\s|$)([\s\S]*)")
 async def kraken(trumpsay):
     name = trumpsay.pattern_match.group(1)
     E = (
@@ -132,7 +132,7 @@ async def kraken(trumpsay):
     await eor(trumpsay, E)
 
 
-@hell_cmd(pattern="schina(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="schina(?:\s|$)([\s\S]*)")
 async def kraken(ckmkb):
     name = ckmkb.pattern_match.group(1)
     F = (
@@ -157,7 +157,7 @@ async def kraken(ckmkb):
     await eor(ckmkb, F)
 
 
-@hell_cmd(pattern="sshit$")
+@cat_cmd(pattern="sshit$")
 async def kraken(shit):
     A = (
         "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
@@ -176,7 +176,7 @@ async def kraken(shit):
     await eor(shit, A)
 
 
-@hell_cmd(pattern="elove$")
+@cat_cmd(pattern="elove$")
 async def kakashi(event):
     await eor(
         event,
@@ -462,72 +462,72 @@ T = (
 )
 
 
-@hell_cmd(pattern="monster$")
+@cat_cmd(pattern="monster$")
 async def _(monster):
     await eor(monster, G)
 
 
-@hell_cmd(pattern="pig$")
+@cat_cmd(pattern="pig$")
 async def _(pig):
     await eor(pig, H)
 
 
-@hell_cmd(pattern="gun$")
+@cat_cmd(pattern="gun$")
 async def _(gun):
     await eor(gun, I)
 
 
-@hell_cmd(pattern="dog$")
+@cat_cmd(pattern="dog$")
 async def _(dog):
     await eor(dog, J)
 
 
-@hell_cmd(pattern="hello$")
+@cat_cmd(pattern="hello$")
 async def _(hello):
     await eor(hello, K)
 
 
-@hell_cmd(pattern="hmf$")
+@cat_cmd(pattern="hmf$")
 async def _(hmf):
     await eor(hmf, L)
 
 
-@hell_cmd(pattern="couple$")
+@cat_cmd(pattern="couple$")
 async def _(couple):
     await eor(couple, M)
 
 
-@hell_cmd(pattern="sup$")
+@cat_cmd(pattern="sup$")
 async def _(supreme):
     await eor(supreme, N)
 
 
-@hell_cmd(pattern="india$")
+@cat_cmd(pattern="india$")
 async def _(event):
     await eor(event, O)
 
 
-@hell_cmd(pattern="wc$")
+@cat_cmd(pattern="wc$")
 async def _(welcome):
     await eor(welcome, P)
 
 
-@hell_cmd(pattern="snk$")
+@cat_cmd(pattern="snk$")
 async def _(snake):
     await eor(snake, Q)
 
 
-@hell_cmd(pattern="bye$")
+@cat_cmd(pattern="bye$")
 async def _(bye):
     await eor(bye, R)
 
 
-@hell_cmd(pattern="shitos$")
+@cat_cmd(pattern="shitos$")
 async def _(shitos):
     await eor(shitos, S)
 
 
-@hell_cmd(pattern="dislike$")
+@cat_cmd(pattern="dislike$")
 async def _(dislike):
     await eor(dislike, T)
 

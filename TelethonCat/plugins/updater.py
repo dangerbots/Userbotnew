@@ -48,7 +48,7 @@ async def print_changelogs(event, ac_br, changelog):
             event.chat_id,
             "output.txt",
             reply_to=event.id,
-            thumb=hell_logo,
+            thumb=cat_logo,
         )
         os.remove("output.txt")
     else:
@@ -90,7 +90,7 @@ async def update(event, repo, ups_rem, ac_br):
     return
 
 
-@hell_cmd(pattern="update(| now)$")
+@cat_cmd(pattern="update(| now)$")
 async def upstream(event):
     lists = event.text.split(" ", 1)
     conf = None
@@ -197,7 +197,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
     return
 
 
-@hell_cmd(pattern="update build$")
+@cat_cmd(pattern="update build$")
 async def upstream(event):
     hell = await eor(event, "`Hard-Update In Progress... \nPlease wait until docker build is finished...`")
     off_repo = UPSTREAM_REPO_URL

@@ -9,7 +9,7 @@ from TelethonCat.plugins import *
 from telegraph import upload_file
 
 
-@hell_cmd(pattern="thug$")
+@cat_cmd(pattern="thug$")
 async def _(event):
     if not event.reply_to_msg_id:
         return await eod(event, "Reply to a image...")
@@ -42,7 +42,7 @@ async def _(event):
             os.remove(files)
 
 
-@hell_cmd(pattern="trigger$")
+@cat_cmd(pattern="trigger$")
 async def _(event):
     hell = await eor(event, "`Trigggggggggerrr`")
     owo = await event.get_reply_message()
@@ -62,7 +62,7 @@ async def _(event):
             os.remove(files)
 
 
-@hell_cmd(pattern="geyy$")
+@cat_cmd(pattern="geyy$")
 async def _(event):
     hell = await eor(event, "`Geyyyy`")
     owo = await event.get_reply_message()
@@ -82,7 +82,7 @@ async def _(event):
             os.remove(files)
 
 
-@hell_cmd(pattern="pix$")
+@cat_cmd(pattern="pix$")
 async def _(event):
     hell = await eor(event, "`Pixing This Image.`")
     owo = await event.get_reply_message()
@@ -102,7 +102,7 @@ async def _(event):
             os.remove(files)
 
 
-@hell_cmd(pattern="ytc(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="ytc(?:\s|$)([\s\S]*)")
 async def _(event):
     hell = await eor(event, "`Making a youthuub comment...`")
     owo = await event.get_reply_message()
@@ -132,7 +132,7 @@ async def _(event):
             os.remove(files)
 
 
-@hell_cmd(pattern="audiomeme(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="audiomeme(?:\s|$)([\s\S]*)")
 async def _(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -159,7 +159,7 @@ async def _(event):
         await parse_error(event, "__404:__  Not Found", False)
 
 
-@hell_cmd(pattern="doge(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="doge(?:\s|$)([\s\S]*)")
 async def nope(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -185,7 +185,7 @@ async def nope(event):
         await parse_error(event, "__404:__ Not Found", False)
 
 
-@hell_cmd(pattern="glax(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="glax(?:\s|$)([\s\S]*)")
 async def nope(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -211,7 +211,7 @@ async def nope(event):
         await parse_error(event, "__404:__ Not Found", False)
 
 
-@hell_cmd(pattern="honka(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="honka(?:\s|$)([\s\S]*)")
 async def nope(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()
@@ -237,7 +237,7 @@ async def nope(event):
         await parse_error(event, "__404:__ Not Found", False)
 
 
-@hell_cmd(pattern="gogl(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="gogl(?:\s|$)([\s\S]*)")
 async def nope(event):
     lists = event.text.split(" ", 1)
     reply = await event.get_reply_message()

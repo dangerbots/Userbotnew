@@ -28,10 +28,10 @@ alive_txt = """{}\n
 
 
 def button(page, modules):
-    Row = Config.BUTTONS_IN_HELP
+    Row = 3
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
-    pairs = list(map(list, zip(modules[::2], modules[1::2])))
-    if len(modules) % 2 == 1:
+    pairs = list(map(list, zip(modules[::Row], modules[1::Row], modules[2::Row])))
+    if len(modules) % Row != 0:
         pairs.append([modules[-1]])
     max_pages = ceil(len(pairs) / Row)
     pairs = [pairs[i : i + Row] for i in range(0, len(pairs), Row)]
@@ -99,7 +99,7 @@ if Config.BOT_USERNAME and tbot:
                 )
         elif event.query.user_id in auth and query == "alive":
             uptime = await get_time((time.time() - StartTime))
-            alive_msg = gvarstat("ALIVE_MSG") or "»»» <b>нєℓℓвσт ιѕ σиℓιиє</b> «««"
+            alive_msg = gvarstat("ALIVE_MSG") or "»»» <b>𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 ιѕ σиℓιиє</b> «««"
             alive_name = gvarstat("ALIVE_NAME") or HELL_USER
             he_ll = alive_txt.format(
                 alive_msg, telethon_version, hellbot_version, uptime, abuse_m, is_sudo
@@ -330,7 +330,7 @@ if Config.BOT_USERNAME and tbot:
                 f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen"
             )
             await event.edit(
-                f"**🎭 Closed HellBot's help menu**\n\n**Bot Of:**  {hell_mention}\n\n        [©️ Hêllẞø† ™️]({chnl_link})",
+                f"**🎭 Closed 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 help menu**\n\n**Bot Of:**  {hell_mention}\n\n        [©️ 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 ™️]({chnl_link})",
                 buttons=veriler,
                 link_preview=False,
             )
@@ -341,13 +341,13 @@ if Config.BOT_USERNAME and tbot:
     async def send(event):
         plugin = event.data_match.group(1).decode("UTF-8")
         _, _, hell_mention = await client_id(event, event.query.user_id)
-        omk = f"**• Plugin name ≈** `{plugin}`\n**• Uploaded by ≈** {hell_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt]({chnl_link})** ⚡"
+        omk = f"**• Plugin name ≈** `{plugin}`\n**• Uploaded by ≈** {hell_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏]({chnl_link})** ⚡"
         the_plugin_file = "./TelethonCat/plugins/{}.py".format(plugin.lower())
         butt = Button.inline(f"{hell_emoji} Main Menu {hell_emoji}", data="reopen")
         if os.path.exists(the_plugin_file):
             await event.edit(
                 file=the_plugin_file,
-                thumb=hell_logo,
+                thumb=cat_logo,
                 text=omk,
                 buttons=butt,
             )

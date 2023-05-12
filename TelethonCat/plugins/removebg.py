@@ -5,7 +5,7 @@ from PIL import Image
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="rmbg(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="rmbg(?:\s|$)([\s\S]*)")
 async def _(event):
     if Config.REMOVE_BG_API is None:
         return await parse_error(event, "`REMOVE_BG_API` __is not configured.__", False)

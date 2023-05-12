@@ -107,4 +107,3 @@ class CmdHelp:
         return True
 
 
-# hellbot

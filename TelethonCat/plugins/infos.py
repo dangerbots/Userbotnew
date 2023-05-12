@@ -22,7 +22,7 @@ from telethon.utils import get_input_location, pack_bot_file_id
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="info(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="info(?:\s|$)([\s\S]*)")
 async def _(event):
     replied_user, error_i_a = await get_full_user(event)
     if replied_user is None:
@@ -160,7 +160,7 @@ async def get_full_user(event):
                 return None, e
 
 
-@hell_cmd(pattern="chatinfo(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="chatinfo(?:\s|$)([\s\S]*)")
 async def info(event):
     hell = await eor(event, "`Analysing the chat...`")
     chat = await get_chatinfo(event)
@@ -421,7 +421,7 @@ async def fetch_info(chat, event):
     return caption
 
 
-@hell_cmd(pattern="users(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="users(?:\s|$)([\s\S]*)")
 async def get_users(show):
     if not show.is_group:
         await parse_error(show, "Not a group.")
@@ -467,7 +467,7 @@ async def get_users(show):
         remove("userslist.txt")
 
 
-@hell_cmd(pattern="admins(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="admins(?:\s|$)([\s\S]*)")
 async def _(event):
     mentions = "**⚜️ Admins in this Group ⚜️**: \n"
     reply_message = None
@@ -516,7 +516,7 @@ async def _(event):
     await event.delete()
 
 
-@hell_cmd(pattern="bots(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="bots(?:\s|$)([\s\S]*)")
 async def _(event):
     mentions = "🤖 **Bots in this Group**: \n"
     input_str = event.pattern_match.group(1)
@@ -547,7 +547,7 @@ async def _(event):
     await eor(event, mentions)
 
 
-@hell_cmd(pattern="id$")
+@cat_cmd(pattern="id$")
 async def _(event):
     hell = await eor(event, "Fetching Ids...")
     if event.reply_to_msg_id:

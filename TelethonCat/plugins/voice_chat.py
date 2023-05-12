@@ -17,7 +17,7 @@ def all_users(a, b):
         yield a[c : c + b]
 
 
-@hell_cmd(pattern="startvc$")
+@cat_cmd(pattern="startvc$")
 async def _(event):
     try:
         await event.client(CreateGroupCallRequest(event.chat_id))
@@ -26,7 +26,7 @@ async def _(event):
         await parse_error(event, f"`{str(e)}`")
 
 
-@hell_cmd(pattern="endvc$")
+@cat_cmd(pattern="endvc$")
 async def _(event):
     try:
         await event.client(DiscardGroupCallRequest(await getvc(event)))
@@ -35,7 +35,7 @@ async def _(event):
         await parse_error(event, f"`{str(e)}`")
 
 
-@hell_cmd(pattern="vcinvite$")
+@cat_cmd(pattern="vcinvite$")
 async def _(event):
     hell = await eor(event, "`🧐 Inviting Users To Voice Chat....`")
     users = []

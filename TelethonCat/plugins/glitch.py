@@ -15,7 +15,7 @@ from PIL import Image
 from TelethonCat.plugins import *
 
 
-@hell_cmd(pattern="glitch(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="glitch(?:\s|$)([\s\S]*)")
 async def glitch_(event):
     Glitched = Config.TMP_DOWNLOAD_DIRECTORY + "glitch.gif"
     hell = await eor(event, "`Trying to glitch this ...`")

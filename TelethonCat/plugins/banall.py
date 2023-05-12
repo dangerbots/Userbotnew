@@ -24,7 +24,7 @@ BANNED_RIGHTS = ChatBannedRights(
 )
 
 
-@hell_cmd(pattern="kickall$", allow_sudo=False)
+@cat_cmd(pattern="kickall$", allow_sudo=False)
 async def _(event):
     ForGo10God, _, _ = await client_id(event)
     result = await event.client(
@@ -56,7 +56,7 @@ async def _(event):
     )
 
 
-@hell_cmd(pattern="banall$", allow_sudo=False)
+@cat_cmd(pattern="banall$", allow_sudo=False)
 async def _(event):
     ForGo10God, _, _ = await client_id(event)
     result = await event.client(
@@ -90,7 +90,7 @@ async def _(event):
     )
 
 
-@hell_cmd(pattern="unbanall$")
+@cat_cmd(pattern="unbanall$")
 async def _(event):
     if event.is_private:
         return
@@ -114,7 +114,7 @@ async def _(event):
     await xyz.edit("{}: {} unbanned".format(event.chat_id, p))
 
 
-@hell_cmd(pattern="ikuck(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="ikuck(?:\s|$)([\s\S]*)")
 async def _(event):
     if event.is_private:
         return
@@ -258,7 +258,7 @@ async def ban_user(event, chat_id, user_id, rights):
         return False, str(exc)
 
 
-@hell_cmd(pattern="blockall(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="blockall(?:\s|$)([\s\S]*)")
 async def block_all(event):
     if event.is_private:
         return
@@ -277,7 +277,7 @@ async def block_all(event):
     await hell.edit(f"**MASS-BLOCK completed !!** \n\n__Blocked:__ `{success} users` \n__Failed:__ `{failed} users`")
 
 
-@hell_cmd(pattern="blockc(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="blockc(?:\s|$)([\s\S]*)")
 async def block_contacts(event):
     if event.is_private:
         return
@@ -300,7 +300,7 @@ async def block_contacts(event):
     await hell.edit(f"**MASS-BLOCK completed !!** \n\n__Blocked:__ `{success} users` \n__Failed:__ `{failed} users`")
 
 
-@hell_cmd(pattern="blocknc(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern="blocknc(?:\s|$)([\s\S]*)")
 async def block_noncontacts(event):
     if event.is_private:
         return
@@ -323,7 +323,7 @@ async def block_noncontacts(event):
     await hell.edit(f"**MASS-BLOCK completed !!** \n\n__Blocked:__ `{success} users` \n__Failed:__ `{failed} users`")
 
 
-@hell_cmd(pattern = "unblockall(?:\s|$)([\s\S]*)")
+@cat_cmd(pattern ="unblockall(?:\s|$)([\s\S]*)")
 async def ublock_all(event):
     if event.is_private:
         return
