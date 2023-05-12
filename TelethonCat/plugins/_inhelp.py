@@ -364,7 +364,7 @@ if Config.BOT_USERNAME and tbot:
 
                     text=HELL_FIRST,
 
-                    title="Hellbot PM Permit",
+                    title="𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 PM Permit",
 
                     buttons=[
 
@@ -390,7 +390,7 @@ if Config.BOT_USERNAME and tbot:
 
                 buttons=[
 
-                    [Button.url("📑 Repo 📑", "https://github.com/dangerbots/userbotnew")],
+                    [Button.url("📑 Repo 📑", "https://github.com/dangerbots/dangercat")],
 
                     [Button.url("dangerbots", "https://t.me/dangerbots")],
 
@@ -602,7 +602,7 @@ if Config.BOT_USERNAME and tbot:
 
         else:
 
-            await event.answer("Hello! This help menu is not for you, you can make yourself a dangercat and use your bot. Go to @dangerbots for more info.", cache_time=0, alert=True)
+            await event.answer("Hello! This help menu is not for you, you can make yourself a 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 and use your bot. Go to @dangerbots for more info.", cache_time=0, alert=True)
 
     @tbot.on(CallbackQuery(data=compile(b"close")))
 
@@ -622,7 +622,7 @@ if Config.BOT_USERNAME and tbot:
 
             await event.edit(
 
-                f"**🎭 Closed dangercat's help menu**\n\n**Bot Of:**  {hell_mention}\n\n        [©️ dangerbots]({chnl_link})",
+                f"**🎭 Closed 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏's help menu**\n\n**Bot Of:**  {hell_mention}\n\n        [©️ dangerbots]({chnl_link})",
 
                 buttons=veriler,
 
@@ -632,7 +632,7 @@ if Config.BOT_USERNAME and tbot:
 
         else:
 
-            await event.answer("Hello! This help menu is not for you, you can make yourself a dangercat and use your bot. Go to @dangerbots for more info.", cache_time=0, alert=True)
+            await event.answer("Hello! This help menu is not for you, you can make yourself a 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 and use your bot. Go to @dangerbots for more info.", cache_time=0, alert=True)
 
             
 
@@ -704,7 +704,7 @@ if Config.BOT_USERNAME and tbot:
 
             return await event.answer(
 
-                "Hello! This help menu is not for you, you can make yourself a HellBot and use your bot. Go to @Its_HellBot for more info.",
+                "Hello! This help menu is not for you, you can make yourself a 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 and use your bot. Go to @dangerbots for more info.",
 
                 cache_time=0,
 
@@ -860,7 +860,7 @@ if Config.BOT_USERNAME and tbot:
 
             return await event.answer(
 
-                "Hello! This help menu is not for you, you can make yourself a 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 and use your bot. Go to @Its_HellBot for more info.",
+                "Hello! This help menu is not for you, you can make yourself a 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 and use your bot. Go to @dangerbots for more info.",
 
                 cache_time=0,
 
