@@ -73,7 +73,7 @@ if Config.BOT_USERNAME and tbot:
             if a:
                 help_pic = a.split(" ")[0]
             else:
-                help_pic = "https://telegra.ph/file/2279444c6debd7b89089c.jpg"
+                help_pic = "https://graph.org/file/7ccb85818faf98a1ce341.jpg"
             help_msg = f"🔰 **{hell_mention}**\n\n📜 __Plugins:__ `{len(CMD_HELP)}` \n🗂️ __Commands:__ `{len(apn)}`\n🗒️ __Page:__ 1/{veriler[0]}"
             if help_pic == "DISABLE":
                 result = builder.article(
@@ -151,7 +151,7 @@ if Config.BOT_USERNAME and tbot:
 
         elif event.query.user_id in auth and query == "pm_warn":
             CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or None
-            HELL_FIRST = f"🔥 dangercat 𝙋𝙈 𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 🔥\n\nHello!! This is an automated message on behalf of {hell_mention}."
+            HELL_FIRST = f"🔥 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 𝙋𝙈 𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 🔥\n\nHello!! This is an automated message on behalf of {hell_mention}."
             if CSTM_PMP:
                 HELL_FIRST += f"\n\n{CSTM_PMP}"
             a = gvarstat("PMPERMIT_PIC")
@@ -181,7 +181,7 @@ if Config.BOT_USERNAME and tbot:
                 result = builder.document(
                     file=PIC,
                     text=HELL_FIRST,
-                    title="dangercat PM Permit",
+                    title=" 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 PM Permit",
                     buttons=[
                         [Button.inline("📝 Request Approval", data="req")],
                         [Button.inline("🚫 Block", data="heheboi")],
@@ -192,7 +192,7 @@ if Config.BOT_USERNAME and tbot:
             else:
                 result = builder.article(
                     text=HELL_FIRST,
-                    title="dngercat PM Permit",
+                    title=" 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 PM Permit",
                     buttons=[
                         [Button.inline("📝 Request Approval", data="req")],
                         [Button.inline("🚫 Block", data="heheboi")],
@@ -204,7 +204,7 @@ if Config.BOT_USERNAME and tbot:
         elif event.query.user_id in auth and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡DANGERCAT⚡️**",
+                text=f"**⚡𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏⚡️**",
                 buttons=[
                     [Button.url("📑 Repo 📑", "https://github.com/dangerbots/dangercat")],
                     [Button.url("dangercat Network", "https://t.me/danger_bots")],
@@ -239,7 +239,7 @@ if Config.BOT_USERNAME and tbot:
         if event.query.user_id in auth:
             reply_popup = "This is for Other Users..."
         else:
-            reply_popup = "🔰 This is dngercat PM Security to keep away unwanted retards from spamming PM !!"
+            reply_popup = "🔰 This is 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 PM Security to keep away unwanted retards from spamming PM !!"
         await event.answer(reply_popup, cache_time=0, alert=True)
 
     @tbot.on(CallbackQuery(data=compile(b"req")))
@@ -319,7 +319,7 @@ if Config.BOT_USERNAME and tbot:
                     file=help_pic,
                 )
         else:
-            await event.answer("Hello! This help menu is not for you, you can make yourself a HellBot and use your bot. Go to @Its_HellBot for more info.", cache_time=0, alert=True)
+            await event.answer("Hello! This help menu is not for you, you can make yourself a 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 and use your bot. Go to @dangerbots for more info.", cache_time=0, alert=True)
 
     @tbot.on(CallbackQuery(data=compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
