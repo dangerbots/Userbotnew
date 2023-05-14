@@ -30,7 +30,7 @@ alive_txt = """{}\n
 def button(page, modules):
     Row = 4
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
-    pairs = list(map(list, zip(modules[::Row], modules[1::Row], modules[1::Row])))
+    pairs = list(map(list, zip(modules[::Row], modules[1::Row], modules[2::Row])))
     if len(modules) % Row != 0:
         pairs.append([modules[-1]])
     max_pages = ceil(len(pairs) / Row)
