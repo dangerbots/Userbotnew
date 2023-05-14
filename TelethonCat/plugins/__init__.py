@@ -41,7 +41,7 @@ from TelethonCat.utils.plug import *
 from TelethonCat.utils.startup import *
 from TelethonCat.version import __dcatver__, __telever__
 
-cjb = "./catconfig/resources/pics/cjb.jpg"
+cjb = "./catconfig/resources/pics/IMG_20230514_133246_487.jpg"
 cat_logo = "./catconfig/resources/pics/dcatlogo.jpg"
 restlo = "./catconfig/resources/pics/rest.jpeg"
 shhh = "./catconfig/resources/pics/chup_madarchod.jpeg"
