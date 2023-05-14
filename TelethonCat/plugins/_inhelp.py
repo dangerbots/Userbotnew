@@ -214,7 +214,7 @@ if Config.BOT_USERNAME and tbot:
         else:
             result = builder.article(
                 "@dangercat",
-                text="""**Hey! This is [dngerbots](https://t.me/danger_bots) \nYou can know more about me from the links given below 👇**""",
+                text="""**Hey! This is [𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏](https://t.me/danger_bots) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
                         Button.url("• Updates •", "https://t.me/Its_HellBot"),
@@ -335,7 +335,7 @@ if Config.BOT_USERNAME and tbot:
                 link_preview=False,
             )
         else:
-            await event.answer("Hello! This help menu is not for you, you can make yourself a HellBot and use your bot. Go to @Its_HellBot for more info.", cache_time=0, alert=True)
+            await event.answer("Hello! This help menu is not for you, you can make yourself a 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 and use your bot. Go to @dangerbots for more info.", cache_time=0, alert=True)
             
     @tbot.on(CallbackQuery(data=compile(b"send\((.+?)\)")))
     async def send(event):
@@ -372,7 +372,7 @@ if Config.BOT_USERNAME and tbot:
             )
         else:
             return await event.answer(
-                "Hello! This help menu is not for you, you can make yourself a HellBot and use your bot. Go to @Its_HellBot for more info.",
+                "Hello! This help menu is not for you, you can make yourself a 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 and use your bot. Go to @dangerbots for more info.",
                 cache_time=0,
                 alert=True,
             )
@@ -403,7 +403,7 @@ if Config.BOT_USERNAME and tbot:
             )
         else:
             return await event.answer(
-                "Hello! This help menu is not for you, you can make yourself a HellBot and use your bot. Go to @Its_HellBot for more info.",
+                "Hello! This help menu is not for you, you can make yourself a 𝘿𝘼𝙉𝙂𝙀𝙍 𝘾𝘼𝙏 and use your bot. Go to @dangerbots for more info.",
                 cache_time=0,
                 alert=True,
             )
