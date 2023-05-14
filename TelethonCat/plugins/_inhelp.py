@@ -28,7 +28,7 @@ alive_txt = """{}\n
 
 
 def button(page, modules):
-    Row = 2
+    Row = 4
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
     pairs = list(map(list, zip(modules[::Row], modules[1::Row], modules[2::Row])))
     if len(modules) % Row != 0:
